@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #F1FAEE;
+    color: #1D3557;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url("./images/home/LunaBleuCows.jpeg");
+    background-size: cover;
+    justify-content: left;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #F1FAEE;
+    font-size: 90px;
+    background-position: center;
+    padding: 50vh 0 50vh 20px;
+    background-attachment: fixed;
+}
