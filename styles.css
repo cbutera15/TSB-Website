@@ -14,11 +14,6 @@ html, body {
 header {
     background-image: url("./images/home/LunaBleuCows.jpeg");
     background-size: cover;
-    justify-content: left;
-    font-family: "Baskerville", serif;
-    font-style: italic;
-    color: #F1FAEE;
-    font-size: 90px;
     background-position: center;
     padding: 50vh 0 50vh 20px;
     background-attachment: fixed;
