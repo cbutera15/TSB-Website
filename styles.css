@@ -23,7 +23,7 @@ header {
     height: 100vh;
     width: 100%;
     align-items: center;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.2s;
     justify-content: center;
     margin: 0 auto;
 }
@@ -33,7 +33,7 @@ header.shrink {
     width: 95%;
     background-color: #FFFFFF;
     border-radius: 40px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     margin: 0 auto;
     justify-content: center;
 }
@@ -141,7 +141,7 @@ section.vid video {
     width: 100%; /* Initial shrunk size */
     height: 100%;
     object-fit: cover;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -149,9 +149,9 @@ section.vid video {
 }
 
 section.vid video.expand {
-    width: 95%; /* Expanded size */
+    width: 95%;
     height: 95%;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     border-radius: 40px;
     margin: 0 auto;
     justify-content: center;
@@ -169,16 +169,20 @@ section.vid div.mission {
 }
 
 section.vid div.mission div {
-    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 30vh;
+    margin-top: 70vh;
+}
+
+section.vid div.mission div:hover {
+    cursor: url('images/home/cursor/plus.png') 30 30, auto;
+    transition: ease-in-out 0.2s;
 }
 
 .placeholder {
-    height: 10vh;
+    height: 8vh;
     background-color: #F1FAEE;
 }
 
