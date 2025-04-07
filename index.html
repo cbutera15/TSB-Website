@@ -47,7 +47,7 @@
     </script>
 </header>
 <main>
-    <section class="placeholder"></section>
+    <section class="spacer1"></section>
     <section class="vid">
         <div class="mission-vid">
             <video src="./videos/home/mission.mp4" muted playsinline></video>
@@ -76,22 +76,23 @@
         <script>
             window.addEventListener('scroll', function() {
                 const video = document.querySelector('section.vid video');
-                const videoTop = video.offsetTop;
-                const videoBottom = videoTop + video.clientHeight;
-                const scrollY = window.scrollY + window.innerHeight;
+                const videoTop = video.offsetTop + 800;
+                const videoBottom = videoTop + video.clientHeight + 950;
 
-                if (scrollY > videoTop && window.scrollY < videoBottom) {
-                    video.classList.add('expand');
-                } else {
+                if (window.scrollY >= videoTop && window.scrollY <= videoBottom) {
                     video.classList.remove('expand');
+                } else {
+                    video.classList.add('expand');
                 }
             });
+
+
         </script>
     </section>
     <section class="placeholder">
-        <p>PLACEHOLDER</p>
     </section>
 </main>
 <script src="scrubbing.js"></script>
+<script src="cursor.js"></script>
 </body>
 </html>

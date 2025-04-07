@@ -4,12 +4,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 html, body {
     background-color: #F1FAEE;
     color: #1D3557;
     max-width: 100%;
+}
+
+.circle_cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #F1FAEE;
+    top: -20px;
+    left: -20px;
+    pointer-events: none;
 }
 
 header {
@@ -177,17 +189,23 @@ section.vid div.mission div {
     flex-direction: column;
 }
 
-section.vid div.mission div:hover {
-    cursor: url('images/home/cursor/plus.png') 30 30, auto;
-    transition: ease-in-out 0.2s;
+section.vid div.mission div:hover .circle_cursor {
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
 }
 
 .icon {
     margin-bottom: 10vh;
 }
 
-.placeholder {
+.spacer1 {
     height: 8vh;
     background-color: #F1FAEE;
 }
+
+.placeholder{
+    height: 200vh;
+}
+
 
