@@ -22,6 +22,8 @@ html, body {
     top: -20px;
     left: -20px;
     pointer-events: none;
+    z-index: 10008;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
 }
 
 header {
@@ -94,6 +96,22 @@ header.shrink {
     }
 }
 
+@keyframes fadeInNoMargin {
+    from {
+        opacity: 0;
+        filter: blur(50px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(1vh);
+    }
+}
+
+.fadeInNoMargin {
+    animation: fadeInNoMargin 1s forwards;
+}
+
 .fixed {
     position: fixed !important;
     top: 0;
@@ -115,6 +133,7 @@ header.shrink {
     margin: 5vh;
     filter: blur(50px);
     animation: fadeIn 3s ease-out forwards;
+    z-index: 10003;
 }
 
 .buttons button{
@@ -123,7 +142,7 @@ header.shrink {
     border: none;
     display: inline-block;
     background-color: transparent;
-    margin: 7vh;
+    margin: 6vh;
     color: #F1FAEE;
     font-size: 4.6vw;
     transition: ease-in-out 0.2s;
@@ -133,6 +152,17 @@ header.shrink {
     transform: scale(1.05);
     transition: transform ease-in-out 0.2s;
     animation: glow 5s ease-in-out infinite alternate;
+}
+
+.buttons-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200vh;
+    height: 14%;
+    z-index: 1002;
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(10px);
 }
 
 @-webkit-keyframes glow {
@@ -196,7 +226,7 @@ section.vid div.mission div:hover .circle_cursor {
 }
 
 .icon {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 .spacer1 {
