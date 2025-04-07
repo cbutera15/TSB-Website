@@ -1,3 +1,5 @@
+@font-face { font-family: Subjectivity; src: url('./fonts/Subjectivity-Regular.otf'); }
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +10,175 @@ html, body {
     background-color: #F1FAEE;
     color: #1D3557;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 header {
-    background-image: url("./images/home/LunaBleuCows.jpeg");
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/home/title-image.jpg");
     background-size: cover;
     background-position: center;
     padding: 50vh 0 50vh 20px;
     background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    justify-content: center;
+    margin: 0 auto;
 }
+
+header.shrink {
+    padding: 10px;
+    width: 95%;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    transition: all 0.5s ease-in-out;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.title {
+    justify-content: left;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #F1FAEE;
+    font-size: 9.2vw;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    filter: blur(50px);
+    animation: fadeIn 2s ease-out forwards;
+    margin: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.subtitle {
+    justify-content: left;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #F1FAEE;
+    font-size: 5vw;
+    position: absolute;
+    top: 17vh;
+    opacity: 0;
+    filter: blur(50px);
+    animation: fadeIn 3s ease-out forwards;
+    margin: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.orange {
+    color: #ffd6a4;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        margin: 0;
+    }
+}
+
+.fixed {
+    position: fixed !important;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.buttons{
+    /*border: red 2px solid;*/
+    display: flex;
+    align-items: center;
+    height: 8vw;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    margin: 5vh;
+    filter: blur(50px);
+    animation: fadeIn 3s ease-out forwards;
+}
+
+.buttons button{
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+    margin: 7vh;
+    color: #F1FAEE;
+    font-size: 4.6vw;
+    transition: ease-in-out 0.2s;
+}
+
+.buttons button:hover{
+    transform: scale(1.05);
+    transition: transform ease-in-out 0.2s;
+    animation: glow 5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+
+}
+
+section.vid {
+    height: 2500px;
+    position: relative;
+}
+
+section.vid div.mission-vid {
+    position: sticky;
+    top: 0;
+}
+
+section.vid video {
+    width: 100%; /* Initial shrunk size */
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+section.vid video.expand {
+    width: 95%; /* Expanded size */
+    height: 95%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 40px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+section.vid div.mission {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: "Subjectivity", serif;
+    font-size: 70px;
+    color: #ffffff;
+}
+
+section.vid div.mission div {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.placeholder {
+    height: 10vh;
+    background-color: #F1FAEE;
+}
+

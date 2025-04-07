@@ -8,30 +8,81 @@
 <body>
 <header>
     <div class="title">
-        <p>THE SIMMERING BONE</p>
+        <p class="orange">T</p>
+        <p>HE <p>
+        <p class="orange">S</p>
+        <p>IMMERING </p>
+        <p class="orange">B</p>
+        <p>ONE</p>
+    </div>
+    <div class="subtitle">
+        <p>Sustainably Produced Bone Broth</p>
     </div>
     <div class="buttons">
         <button>MARKET</button>
         <button>INGREDIENTS</button>
         <button>ABOUT US</button>
     </div>
+    <script>
+        const buttonTop = document.querySelector('.buttons').offsetTop;
 
-<!--    <script>-->
-<!--        const pageTop = document.querySelector('button').offsetTop;-->
+        window.addEventListener("scroll", () => {
+            if (window.scrollY >= buttonTop + 50) {
+                document.querySelector('.buttons').classList.add("fixed");
+            } else {
+                document.querySelector('.buttons').classList.remove("fixed");
+            }
+        });
+    </script>
 
-<!--        window.addEventListener("scroll", () => {-->
-<!--            if (window.scrollY >= pageTop) {-->
-<!--                document.querySelector('button').classList.add("fixed");-->
-<!--            } else {-->
-<!--                document.querySelector('button').classList.remove("fixed");-->
-<!--            }-->
-<!--        });-->
-<!--    </script>-->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 25) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
 </header>
 <main>
-    <div class="mission">
-        <p>Mission</p>
-    </div>
+    <section class="placeholder"></section>
+    <section class="vid">
+        <div class="mission-vid">
+            <video src="./videos/home/mission.mp4" muted playsinline></video>
+        </div>
+        <div class="mission">
+            <div>
+                <h3>Clean Ingredients</h3>
+            </div>
+            <div>
+                <h3>Supporting Local Farmers</h3>
+            </div>
+            <div>
+                <h3>Sustainably Produced + Always Plastic Free</h3>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener('scroll', function() {
+                const video = document.querySelector('section.vid video');
+                const videoTop = video.offsetTop;
+                const videoBottom = videoTop + video.clientHeight;
+                const scrollY = window.scrollY + window.innerHeight;
+
+                if (scrollY > videoTop && window.scrollY < videoBottom) {
+                    video.classList.add('expand');
+                } else {
+                    video.classList.remove('expand');
+                }
+            });
+        </script>
+    </section>
+    <section class="placeholder">
+        <p>PLACEHOLDER</p>
+    </section>
 </main>
+<script src="scrubbing.js"></script>
 </body>
 </html>
