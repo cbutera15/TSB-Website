@@ -173,12 +173,17 @@ section.vid div.mission div {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 70vh;
+    margin-top: 25vh;
+    flex-direction: column;
 }
 
 section.vid div.mission div:hover {
     cursor: url('images/home/cursor/plus.png') 30 30, auto;
     transition: ease-in-out 0.2s;
+}
+
+.icon {
+    margin-bottom: 10vh;
 }
 
 .placeholder {
