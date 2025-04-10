@@ -26,12 +26,23 @@
         </div>
     <script>
         const buttonTop = document.querySelector('.buttons').offsetTop;
+        const buttonsBackground = document.querySelector('.buttons-background');
+        const buttons = document.querySelector('.buttons');
+        const brandTop = document.querySelector('.brand-statement')?.offsetTop || 0;
 
         window.addEventListener("scroll", () => {
             if (window.scrollY >= buttonTop + 50) {
                 document.querySelector('.buttons').classList.add("fixed");
+                buttonsBackground.style.display = 'block';
             } else {
                 document.querySelector('.buttons').classList.remove("fixed");
+                buttonsBackground.style.display = 'none';
+            }
+
+            if (window.scrollY >= brandTop) {
+                buttons.style.color = '#ff6a00';
+            } else {
+                buttonsBackground.style.color = '#fafaee';
             }
         });
     </script>
@@ -39,10 +50,12 @@
     <script>
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 25) {
-                header.classList.add('shrink');
+            if (window.scrollY < 250) {
+                header.style.width = (100 - window.scrollY / 55) + "%";
+                header.style.borderRadius = (window.scrollY / 7) + "px";
             } else {
-                header.classList.remove('shrink');
+                header.style.width = (95.672727) + "%";
+                header.style.borderRadius = (34.142857) + "px";
             }
         });
     </script>
@@ -75,15 +88,42 @@
         </div>
 
         <script>
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const video = document.querySelector('section.vid video');
-                const videoTop = video.offsetTop + 800;
-                const videoBottom = videoTop + video.clientHeight + 950;
+                const videoRect = video.getBoundingClientRect();
+                const videoTop = videoRect.top + window.scrollY;
+                const videoBottom = videoTop + videoRect.height;
+                const screenHeight = window.innerHeight;
 
-                if (window.scrollY >= videoTop && window.scrollY <= videoBottom) {
-                    video.classList.remove('expand');
+                const maxWidth = 100; // Maximum width in percentage
+                const minWidth = 95.67; // Minimum width in percentage
+                const maxRadius = 34.14; // Maximum border-radius in px
+                const minRadius = 0; // Minimum border-radius in px
+
+                const scrollY = window.scrollY;
+
+                if (scrollY + screenHeight < videoTop) {
+                    // Before video
+                    video.style.width = `${minWidth}%`;
+                    video.style.borderRadius = `${maxRadius}px`;
+                } else if (scrollY + screenHeight >= videoTop && scrollY < videoTop) {
+                    // Scrolling into video
+                    const progress = Math.min((scrollY + screenHeight - videoTop) / screenHeight, 1);
+                    video.style.width = `${minWidth + progress * (maxWidth - minWidth)}%`;
+                    video.style.borderRadius = `${maxRadius - progress * (maxRadius - minRadius)}px`;
+                } else if (scrollY >= videoTop && scrollY < videoBottom - screenHeight) {
+                    // While scrolling through video
+                    video.style.width = `${maxWidth}%`;
+                    video.style.borderRadius = `${minRadius}px`;
+                } else if (scrollY >= videoBottom - screenHeight && scrollY < videoBottom) {
+                    // Scrolling out of video
+                    const progress = Math.min((scrollY - (videoBottom - screenHeight)) / screenHeight, 1);
+                    video.style.width = `${maxWidth - progress * (maxWidth - minWidth)}%`;
+                    video.style.borderRadius = `${minRadius + progress * (maxRadius - minRadius)}px`;
                 } else {
-                    video.classList.add('expand');
+                    // After video
+                    video.style.width = `${minWidth}%`;
+                    video.style.borderRadius = `${maxRadius}px`;
                 }
             });
 
@@ -111,8 +151,278 @@
             });
         </script>
     </section>
-    <section class="placeholder">
+    <section class="brand-statement">
+        <div class="scribbles-above">
+<!--            <div class="scribble1">-->
+<!--                <img src="images/home/scribbles/scribble1.png" alt="Scribble" id="scribble1">-->
+<!--            </div>-->
+<!--            <div class="scribble2">-->
+<!--                <img src="images/home/scribbles/scribble2.png" alt="Scribble" id="scribble2">-->
+<!--            </div>-->
+<!--            <div class="scribble3">-->
+<!--                <img src="images/home/scribbles/scribble3.png" alt="Scribble" id="scribble3">-->
+<!--            </div>-->
+            <div class="scribble-videos">
+                <video src="videos/home/scribble-line-1.mov" muted playsinline id="scrib-vid-1" data-offset="120"></video>
+                <video src="videos/home/scribble-line-2.mov" muted playsinline id="scrib-vid-2" data-offset="-50"></video>
+            </div>
+        </div>
+        <div class="brand-statement-container">
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">L</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">c</div>
+                <div class="char" style="position: relative; display: inline-block;">a</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+                <div class="char" style="position: relative; display: inline-block;">d</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">b</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+                <div class="char" style="position: relative; display: inline-block;">a</div>
+                <div class="char" style="position: relative; display: inline-block;">u</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">f</div>
+                <div class="char" style="position: relative; display: inline-block;">u</div>
+                <div class="char" style="position: relative; display: inline-block;">l</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">V</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+                <div class="char" style="position: relative; display: inline-block;">m</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">,</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">T</div>
+                <div class="char" style="position: relative; display: inline-block;">h</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">S</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">m</div>
+                <div class="char" style="position: relative; display: inline-block;">m</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+                <div class="char" style="position: relative; display: inline-block;">g</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">B</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">s</div>
+                <div class="char" style="position: relative; display: inline-block;">u</div>
+                <div class="char" style="position: relative; display: inline-block;">p</div>
+                <div class="char" style="position: relative; display: inline-block;">p</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">s</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">h</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">b</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+                <div class="char" style="position: relative; display: inline-block;">s</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">f</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">u</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">s</div>
+                <div class="char" style="position: relative; display: inline-block;">m</div>
+                <div class="char" style="position: relative; display: inline-block;">a</div>
+                <div class="char" style="position: relative; display: inline-block;">l</div>
+                <div class="char" style="position: relative; display: inline-block;">l</div>
+                <div class="char" style="position: relative; display: inline-block;">,</div>
+            </div>
+            <div class="word" id="local_word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">l</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">c</div>
+                <div class="char" style="position: relative; display: inline-block;">a</div>
+                <div class="char" style="position: relative; display: inline-block;">l</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">f</div>
+                <div class="char" style="position: relative; display: inline-block;">a</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+                <div class="char" style="position: relative; display: inline-block;">m</div>
+                <div class="char" style="position: relative; display: inline-block;">s</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">w</div>
+                <div class="char" style="position: relative; display: inline-block;">h</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">l</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">b</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+                <div class="char" style="position: relative; display: inline-block;">g</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+                <div class="char" style="position: relative; display: inline-block;">g</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">h</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">h</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">g</div>
+                <div class="char" style="position: relative; display: inline-block;">h</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+                <div class="char" style="position: relative; display: inline-block;">s</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+            </div>
+            <div class="word" id="quality_word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">q</div>
+                <div class="char" style="position: relative; display: inline-block;">u</div>
+                <div class="char" style="position: relative; display: inline-block;">a</div>
+                <div class="char" style="position: relative; display: inline-block;">l</div>
+                <div class="char" style="position: relative; display: inline-block;">i</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">y</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">b</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+                <div class="char" style="position: relative; display: inline-block;">e</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">b</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">h</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">t</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">y</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">u</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">a</div>
+                <div class="char" style="position: relative; display: inline-block;">n</div>
+                <div class="char" style="position: relative; display: inline-block;">d</div>
+            </div>
+            <div class="word" style="position: relative; display: inline-block;">
+                <div class="char" style="position: relative; display: inline-block;">y</div>
+                <div class="char" style="position: relative; display: inline-block;">o</div>
+                <div class="char" style="position: relative; display: inline-block;">u</div>
+                <div class="char" style="position: relative; display: inline-block;">r</div>
+                <div class="char" style="position: relative; display: inline-block;">s</div>
+                <div class="char" style="position: relative; display: inline-block;">.</div>
+            </div>
+        </div>
+        <div class="scribbles-below">
+<!--            <div class="scribble4">-->
+<!--                <img src="images/home/scribbles/scribble4.png" alt="Scribble" id="scribble4">-->
+<!--            </div>-->
+        </div>
+
+        <script>
+            window.addEventListener('scroll', function () {
+                const chars = document.getElementsByClassName('char');
+                const section = document.querySelector('.brand-statement');
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                if (window.scrollY > sectionTop - 500 && window.scrollY < sectionTop + sectionHeight) {
+                    const scrollOffset = window.scrollY - sectionTop + 450;
+                    const char_index = Math.min(Math.floor(scrollOffset / 5), chars.length - 1);
+
+                    Array.from(chars).forEach((char, index) => {
+                        char.style.opacity = index <= char_index ? '1' : '0.2';
+                    });
+                }
+            });
+
+            // Lock underline to "local" word div
+            window.addEventListener('resize', () => {
+                const local = document.getElementById('local_word');
+                const quality = document.getElementById('quality_word');
+
+                const underline1 = document.getElementById('scrib-vid-1');
+                const underline2 = document.getElementById('scrib-vid-2');
+
+                const wordTop1 = local.offsetTop;
+                const wordLeft1 = local.offsetLeft;
+
+                const wordTop2 = quality.offsetTop;
+                const wordLeft2 = quality.offsetLeft;
+
+                underline1.style.position = 'absolute';
+                underline1.style.left = `${wordLeft1 - 25}px`;
+                underline1.style.top = `${wordTop1 - local.offsetHeight + 25}px`;
+
+                underline2.style.position = 'absolute';
+                underline2.style.left = `${wordLeft2 - 20}px`;
+                underline2.style.top = `${wordTop2 - quality.offsetHeight}px`;
+            });
+
+            window.addEventListener('scroll', () => {
+                const local = document.getElementById('local_word');
+                const quality = document.getElementById('quality_word');
+
+                const underline1 = document.getElementById('scrib-vid-1');
+                const underline2 = document.getElementById('scrib-vid-2');
+
+                const wordTop1 = local.offsetTop;
+                const wordLeft1 = local.offsetLeft;
+
+                const wordTop2 = quality.offsetTop;
+                const wordLeft2 = quality.offsetLeft;
+
+                underline1.style.position = 'absolute';
+                underline1.style.left = `${wordLeft1 - 15}px`;
+                underline1.style.top = `${wordTop1 - local.offsetHeight + 25}px`;
+
+                underline2.style.position = 'absolute';
+                underline2.style.left = `${wordLeft2 - 20}px`;
+                underline2.style.top = `${wordTop2 - quality.offsetHeight}px`;
+            });
+
+        </script>
     </section>
+    <div class="placeholder"></div>
 </main>
 <script src="scrubbing.js"></script>
 <div class="circle_cursor"></div>
@@ -121,19 +431,20 @@
     document.addEventListener('DOMContentLoaded', () => {
         const missionDivs = document.querySelectorAll('section.vid div.mission div');
         const buttonDivs = document.querySelectorAll('.buttons button');
+        const statementSection = document.querySelector('.brand-statement');
         const circleCursor = document.querySelector('.circle_cursor');
 
         missionDivs.forEach(div => {
             div.addEventListener('mouseenter', () => {
                 circleCursor.style.width = '30px';
                 circleCursor.style.height = '30px';
-                circleCursor.style.backgroundColor = '#ffd6a4';
+                circleCursor.style.backgroundColor = '#ff6a00';
             });
 
             div.addEventListener('mouseleave', () => {
                 circleCursor.style.width = '20px';
                 circleCursor.style.height = '20px';
-                circleCursor.style.backgroundColor = '#F1FAEE';
+                circleCursor.style.backgroundColor = '#fafaee';
             });
         });
 
@@ -141,14 +452,24 @@
             button.addEventListener('mouseenter', () => {
                 circleCursor.style.width = '30px';
                 circleCursor.style.height = '30px';
-                circleCursor.style.backgroundColor = '#ffd6a4';
+                circleCursor.style.backgroundColor = '#ff6a00';
             });
 
             button.addEventListener('mouseleave', () => {
                 circleCursor.style.width = '20px';
                 circleCursor.style.height = '20px';
-                circleCursor.style.backgroundColor = '#F1FAEE';
+                circleCursor.style.backgroundColor = '#fafaee';
             });
+        });
+
+        statementSection.addEventListener('mouseenter', () => {
+            circleCursor.style.backgroundColor = '#ff6a00';
+        });
+
+        statementSection.addEventListener('mouseleave', () => {
+            circleCursor.style.width = '20px';
+            circleCursor.style.height = '20px';
+            circleCursor.style.backgroundColor = '#fafaee';
         });
     });
 
@@ -156,5 +477,46 @@
 
 </script>
 <script src="cursor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const lenis = new Lenis({
+            duration: 1.2,
+            smooth: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        const brandStatement = document.querySelector('.brand-statement-container');
+        let isPaused = false;
+        let hasScrolledPast = false;
+
+        lenis.on('scroll', ({ scroll }) => {
+            const brandRect = brandStatement.getBoundingClientRect();
+            const brandTop = brandRect.top + window.scrollY;
+            const brandBottom = brandTop + brandRect.height;
+
+            if (!isPaused && !hasScrolledPast && scroll >= brandTop && scroll < brandBottom) {
+                isPaused = true;
+                lenis.stop(1000);
+
+                setTimeout(() => {
+                    lenis.start();
+                    isPaused = false;
+                    hasScrolledPast = true;
+                }, 1000);
+            }
+
+            if (scroll < brandTop || scroll >= brandBottom) {
+                hasScrolledPast = false;
+            }
+        });
+    });
+</script>
 </body>
 </html>

@@ -1,4 +1,6 @@
-@font-face { font-family: Subjectivity; src: url('./fonts/Subjectivity-Regular.otf'); }
+@font-face { font-family: Subjectivity-Regular; src: url('./fonts/Subjectivity-Regular.otf'); }
+@font-face { font-family: Subjectivity-Medium; src: url('./fonts/Subjectivity-Medium.otf'); }
+@font-face { font-family: Subjectivity-Bold; src: url('./fonts/Subjectivity-Bold.otf'); }
 
 * {
     margin: 0;
@@ -8,7 +10,7 @@
 }
 
 html, body {
-    background-color: #F1FAEE;
+    background-color: #fafaee;
     color: #1D3557;
     max-width: 100%;
 }
@@ -18,7 +20,7 @@ html, body {
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    background-color: #F1FAEE;
+    background-color: #fafaee;
     top: -20px;
     left: -20px;
     pointer-events: none;
@@ -37,26 +39,16 @@ header {
     height: 100vh;
     width: 100%;
     align-items: center;
-    transition: all ease-in-out 0.2s;
+    /*transition: all ease-in-out 0.2s;*/
     justify-content: center;
     margin: 0 auto;
-}
-
-header.shrink {
-    padding: 10px;
-    width: 95%;
-    background-color: #FFFFFF;
-    border-radius: 40px;
-    transition: all 0.2s ease-in-out;
-    margin: 0 auto;
-    justify-content: center;
 }
 
 .title {
     justify-content: left;
     font-family: "Baskerville", serif;
     font-style: italic;
-    color: #F1FAEE;
+    color: #fafaee;
     font-size: 9.2vw;
     position: absolute;
     top: 0;
@@ -72,7 +64,7 @@ header.shrink {
     justify-content: left;
     font-family: "Baskerville", serif;
     font-style: italic;
-    color: #F1FAEE;
+    color: #fafaee;
     font-size: 5vw;
     position: absolute;
     top: 17vh;
@@ -85,7 +77,7 @@ header.shrink {
 }
 
 .orange {
-    color: #ffd6a4;
+    color: #ff6a00;
 }
 
 @keyframes fadeIn {
@@ -143,7 +135,7 @@ header.shrink {
     display: inline-block;
     background-color: transparent;
     margin: 6vh;
-    color: #F1FAEE;
+    color: #fafaee;
     font-size: 4.6vw;
     transition: ease-in-out 0.2s;
 }
@@ -177,27 +169,19 @@ section.vid {
 section.vid div.mission-vid {
     position: sticky;
     top: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 section.vid video {
-    width: 100%; /* Initial shrunk size */
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
-    transition: all 0.2s ease-in-out;
+    /*transition: all 0.2s ease-in-out;*/
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     display: flex;
-}
-
-section.vid video.expand {
-    width: 95%;
-    height: 95%;
-    transition: all 0.2s ease-in-out;
-    border-radius: 40px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
 }
 
 section.vid div.mission {
@@ -205,9 +189,9 @@ section.vid div.mission {
     top: 0;
     left: 0;
     width: 100%;
-    font-family: "Subjectivity", serif;
+    font-family: "Subjectivity-Regular", serif;
     font-size: 70px;
-    color: #ffffff;
+    color: #fafaee;
 }
 
 section.vid div.mission div {
@@ -217,6 +201,7 @@ section.vid div.mission div {
     text-align: center;
     margin-top: 25vh;
     flex-direction: column;
+    color: #ffffff;
 }
 
 section.vid div.mission div:hover .circle_cursor {
@@ -231,11 +216,107 @@ section.vid div.mission div:hover .circle_cursor {
 
 .spacer1 {
     height: 8vh;
-    background-color: #F1FAEE;
+    background-color: #fafaee;
+}
+
+.brand-statement {
+    height: 105vh;
+    font-size: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-statement-container {
+    padding: 20vh 10vh 0 10vh;
+    z-index: 10;
+}
+
+.word {
+    font-family: "Subjectivity-Bold", serif;
+    padding: 0 2vh;
+}
+
+.char {
+    color: #ff6a00;
+    transition: all 0.1s ease-in-out;
+}
+
+#scribble1 {
+    height: 10vw;
+    width: 10vw;
+    position: relative;
+    top: -500px;
+    left: 10vw;
+    z-index: 1;
+    transform: translate(-0%, 200%);
+}
+
+#scribble2 {
+    height: 10vw;
+    width: 10vw;
+    position: relative;
+    top: 100px;
+    left: 85vw;
+    z-index: 1;
+}
+
+/*#scribble3 {*/
+/*    height: 10vw;*/
+/*    width: 10vw;*/
+/*    position: relative;*/
+/*    rotate: -80deg;*/
+/*    top: -500px;*/
+/*    left: 50vw;*/
+/*    z-index: 1;*/
+/*    transform: translate(-0%, 200%);*/
+/*}*/
+
+#scribble4 {
+    height: 10vw;
+    width: 10vw;
+    position: relative;
+    top: 400px;
+    left: -60vw;
+    z-index: 1;
+}
+
+#scrib-vid-1 {
+    height: 130px;
+    position: relative;
+    top: 12vh;
+    left: 39vw;
+    z-index: 1;
+}
+
+#scrib-vid-2 {
+    height: 180px;
+    position: relative;
+    top: 15vh;
+    left: 39vw;
+    z-index: 1;
 }
 
 .placeholder{
     height: 200vh;
+}
+
+/*Lenis*/
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
 }
 
 
