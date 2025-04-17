@@ -1,6 +1,7 @@
 @font-face { font-family: Subjectivity-Regular; src: url('./fonts/Subjectivity-Regular.otf'); }
 @font-face { font-family: Subjectivity-Medium; src: url('./fonts/Subjectivity-Medium.otf'); }
 @font-face { font-family: Subjectivity-Bold; src: url('./fonts/Subjectivity-Bold.otf'); }
+@font-face { font-family: Gluten-Medium; src: url('./fonts/Gluten-Medium.otf'); }
 
 * {
     margin: 0;
@@ -155,6 +156,41 @@ header {
     z-index: 1002;
     background: rgba(255, 255, 255, 0.0);
     backdrop-filter: blur(10px);
+    opacity: 0;
+}
+
+.market-CTA-blob {
+    position: absolute;
+    bottom: -25px;
+    left: -280px;
+    rotate: 45deg;
+    opacity: 15%;
+    filter: blur(25px);
+}
+
+.market-CTA-blurb {
+    color: #ff6a00;
+    font-family: "Gluten-Medium", serif;
+    font-size: 2vw;
+    width: 200px;
+    text-align: center;
+    rotate: 12deg;
+    position: absolute;
+    bottom: 90px;
+    left: -250px;
+}
+
+.market-CTA-arrow {
+    rotate: -70deg;
+    position: absolute;
+    bottom: -50px;
+    left: -200px;
+}
+
+.market-CTA {
+    position: relative;
+    left: -30vw;
+    bottom: -30vh;
 }
 
 @-webkit-keyframes glow {
@@ -295,6 +331,19 @@ section.vid div.mission div:hover .circle_cursor {
     top: 15vh;
     left: 39vw;
     z-index: 1;
+}
+
+.quick-about {
+    height: 100vh;
+}
+
+.about-text {
+    font-family: "Subjectivity-Regular", serif;
+    color: #ff6a00;
+    font-size: 5vh;
+    text-align: left;
+    padding: 20vh 10vh 0 10vh;
+    position: relative;
 }
 
 .placeholder{
