@@ -342,8 +342,21 @@ section.vid div.mission div:hover .circle_cursor {
     color: #ff6a00;
     font-size: 5vh;
     text-align: left;
-    padding: 20vh 10vh 0 10vh;
+    padding: 20vh 10vh 0 11.5vh;
     position: relative;
+}
+
+.health-benefits {
+    height: 300vh;
+    background-color: #fafaee;
+    color: #fafaee;
+    font-family: "Subjectivity-Bold", serif;
+    font-size: 10vh;
+    text-align: center;
+}
+
+.benefits-title {
+    /*position: fixed;*/
 }
 
 .placeholder{

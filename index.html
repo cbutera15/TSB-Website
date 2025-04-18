@@ -10,7 +10,7 @@
 <header>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="animations.js"></script>
+    <script src="animations-home.js"></script>
     <div class="title">
         <p class="orange">T</p>
         <p>HE <p>
@@ -143,41 +143,10 @@
                 }
             });
 
-            document.addEventListener('DOMContentLoaded', () => {
-                const missionDivs = document.querySelectorAll('section.vid div.mission div');
-
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0
-                };
-
-                // const observer = new IntersectionObserver((entries, observer) => {
-                //     entries.forEach(entry => {
-                //         if (entry.isIntersecting) {
-                //             entry.target.style.animation = 'fadeInNoMargin 1s ease-out forwards';
-                //             observer.unobserve(entry.target);
-                //         }
-                //     });
-                // }, observerOptions);
-                //
-                // missionDivs.forEach(div => {
-                //     observer.observe(div);
-                // });
-            });
         </script>
     </section>
     <section class="brand-statement">
         <div class="scribbles-above">
-<!--            <div class="scribble1">-->
-<!--                <img src="images/home/scribbles/scribble1.png" alt="Scribble" id="scribble1">-->
-<!--            </div>-->
-<!--            <div class="scribble2">-->
-<!--                <img src="images/home/scribbles/scribble2.png" alt="Scribble" id="scribble2">-->
-<!--            </div>-->
-<!--            <div class="scribble3">-->
-<!--                <img src="images/home/scribbles/scribble3.png" alt="Scribble" id="scribble3">-->
-<!--            </div>-->
             <div class="scribble-videos">
                 <video src="videos/home/scribble-line-1.mov" muted playsinline id="scrib-vid-1" data-offset="120"></video>
                 <video src="videos/home/scribble-line-2.mov" muted playsinline id="scrib-vid-2" data-offset="-50"></video>
@@ -393,6 +362,8 @@
 
             // Lock underline to "local" word div
             window.addEventListener('resize', () => {
+                // TODO - resize scribbles dynamically
+                //  (currently they go off page when shrinking up-down, left-right appears to work fine)
                 const local = document.getElementById('local_word');
                 const quality = document.getElementById('quality_word');
 
@@ -447,6 +418,11 @@
                 "Simmer" is committed to a plastic free existence. </p>
         </div>
     </section>
+    <div class="health-benefits">
+        <div class="benefits-title">
+            <p>Health Benefits</p>
+        </div>
+    </div>
     <div class="placeholder"></div>
 </main>
 <script src="scrubbing.js"></script>
