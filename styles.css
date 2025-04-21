@@ -169,14 +169,14 @@ header {
 }
 
 .market-CTA-blurb {
-    color: #ff6a00;
+    color: #fafaee;
     font-family: "Gluten-Medium", serif;
     font-size: 2vw;
     width: 200px;
     text-align: center;
     rotate: 12deg;
     position: absolute;
-    bottom: 90px;
+    bottom: 75px;
     left: -250px;
 }
 
@@ -346,18 +346,79 @@ section.vid div.mission div:hover .circle_cursor {
     position: relative;
 }
 
+.benefits-title {
+    font-family: "Subjectivity-Bold", serif;
+}
+
 .health-benefits {
     height: 300vh;
     background-color: #fafaee;
     color: #fafaee;
-    font-family: "Subjectivity-Bold", serif;
+    font-family: "Subjectivity-Medium", serif;
     font-size: 10vh;
     text-align: center;
 }
 
 .benefits-title {
-    /*position: fixed;*/
+    position: fixed !important;
+    align-content: center;
+    justify-content: center;
+    top: 50vh;
+    left: 45vh;
 }
+
+.sp-benefits-container {
+    font-size: 5vh;
+    text-align: center;
+}
+
+.benefits-1 {
+    position: fixed;
+    top: 15vh;
+}
+
+.benefits-2 {
+    position: fixed;
+    top: 22vh;
+}
+
+.benefits-3 {
+    position: fixed;
+    top: 29vh;
+}
+
+.benefits-4 {
+    position: fixed;
+    top: 36vh;
+}
+
+.benefits-5 {
+    position: fixed;
+    top: 55vh;
+}
+
+.benefits-6 {
+    position: fixed;
+    top: 62vh;
+}
+
+.benefits-7 {
+    position: fixed;
+    top: 69vh;
+}
+
+.benefits-8 {
+    position: fixed;
+    top: 76vh;
+}
+
+.benefits-9 {
+    position: fixed;
+    top: 83vh;
+}
+
+
+
 
 .placeholder{
     height: 200vh;

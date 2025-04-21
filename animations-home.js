@@ -2,7 +2,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Nav Color
+    // Nav Color (ADD ALL BUTTON COLOR CHANGES HERE)
     gsap.fromTo(
         ".buttons button",
         {color: '#fafaee'},
@@ -125,13 +125,157 @@ document.addEventListener("DOMContentLoaded", function() {
         ".benefits-title",
         {y: -1500, opacity: 0},
         {
-            y: 0,
+            y: -50,
             opacity: 1,
             duration: 2,
             scrollTrigger: {
                 trigger: ".health-benefits",
                 start: "top 100%",
                 end: "top 20%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-1",
+        {x: 1600},
+        {
+            x: -500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top 20%",
+                end: "top -100%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-2",
+        {x: 1600},
+        {
+            x: -1500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top 0%",
+                end: "top -200%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-3",
+        {x: 1600},
+        {
+            x: -1300,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top -100%",
+                end: "top -250%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-4",
+        {x: 1600},
+        {
+            x: -1500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top 30%",
+                end: "top -100%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-5",
+        {x: 1600},
+        {
+            x: -1500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top -50%",
+                end: "top -200%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-6",
+        {x: 1600},
+        {
+            x: -1500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top -0%",
+                end: "top -250%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-7",
+        {x: 1600},
+        {
+            x: -1500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top -100%",
+                end: "top -225%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-8",
+        {x: 1600},
+        {
+            x: -1500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top -75%",
+                end: "top -175%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".benefits-9",
+        {x: 1600},
+        {
+            x: -1500,
+            duration: 5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top -125%",
+                end: "top -250%",
                 scrub: true,
             },
         }
