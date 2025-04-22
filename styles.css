@@ -354,7 +354,7 @@ section.vid div.mission div:hover .circle_cursor {
     height: 300vh;
     background-color: #fafaee;
     color: #fafaee;
-    font-family: "Subjectivity-Medium", serif;
+    font-family: "Gluten-Medium", serif;
     font-size: 10vh;
     text-align: center;
 }
@@ -428,14 +428,46 @@ section.vid div.mission div:hover .circle_cursor {
 }
 
 .our-broth {
-    height: 100vh;
-}
-
-.placeholder{
     height: 200vh;
 }
 
+.broth-title {
+    position: fixed !important;
+    top: 40vh;
+    left: 35vw;
+}
 
+.broth-title p {
+    display: inline-block;
+}
+
+.broth-def {
+    position: fixed;
+    font-family: "Subjectivity-Regular", serif;
+    color: #ff6a00;
+    font-size: 5vh;
+    bottom: 15vh;
+    left: 15vw;
+    padding-right: 10vw;
+}
+
+#broth-def-1 {
+    font-family: "Subjectivity-Bold", serif;
+}
+
+#broth-def-2 {
+    font-family: "Subjectivity-Medium", serif;
+}
+
+.broth-photo-1 {
+    position: fixed;
+    top: 30vh;
+    left: 60vw;
+}
+
+.placeholder {
+    height: 200vh;
+}
 
 
 /*DO NOT TOUCH BELOW - Preloaded styles for scrolling behavior from Lenis*/

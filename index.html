@@ -454,10 +454,28 @@
     </div>
     <div class="our-broth">
         <div class="broth-title">
-            <p>Our Broth</p>
+            <p id="broth-title-1">Our</p>
+            <p id="broth-title-2">Broth</p>
+        </div>
+        <div class="broth-photos">
+            <div class="broth-photo-1">
+<!--                <img src="images/home/our-broth-1.jpg" alt="" height="400">-->
+            </div>
+        </div>
+        <div class="broth-def">
+            <p id="broth-def-1">
+                noun
+            </p>
+            <p id="broth-def-2">
+                /brôTH,bräTH/
+            </p>
+            <p>
+                1. A liquid made by simmering bones, meat, or vegetables in water, often used as a base for soups,
+                sauces, and gravies.
+            </p>
         </div>
     </div>
-<!--    <div class="placeholder"></div>-->
+    <div class="placeholder"></div>
 </main>
 <script src="scrubbing.js"></script>
 <div class="circle_cursor"></div>
@@ -469,6 +487,8 @@
 
         const statementSection = document.querySelector('.brand-statement');
         const aboutSection = document.querySelector('.quick-about');
+        const benefitsSection = document.querySelector('.health-benefits');
+        const brothSection = document.querySelector('.our-broth');
 
         const circleCursor = document.querySelector('.circle_cursor');
 
@@ -518,6 +538,14 @@
             circleCursor.style.width = '20px';
             circleCursor.style.height = '20px';
             circleCursor.style.backgroundColor = '#fafaee';
+        });
+
+        benefitsSection.addEventListener('mouseenter', () => {
+            circleCursor.style.backgroundColor = '#fafaee';
+        });
+
+        brothSection.addEventListener('mouseenter', () => {
+            circleCursor.style.backgroundColor = '#ff6a00';
         });
     });
 

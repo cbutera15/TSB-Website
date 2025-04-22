@@ -31,6 +31,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     );
 
+    gsap.fromTo(
+        ".buttons button",
+        {color: '#fafaee'},
+        {
+            color: "#ff6a00",
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top 10%",
+                end: "top -10%",
+                scrub: true,
+            }
+        }
+    );
+
     // Mission Divs
     gsap.fromTo(
         ".mission-1",
@@ -291,6 +305,97 @@ document.addEventListener("DOMContentLoaded", function() {
                 trigger: ".our-broth",
                 start: "top 100%",
                 end: "top 20%",
+                scrub: true,
+            },
+        }
+    );
+
+    // Broth Section
+    gsap.fromTo(
+        ".broth-title",
+        {opacity: 0},
+        {
+            opacity: 1,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top 90%",
+                end: "top 90%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        "#broth-title-1",
+        {x: 0},
+        {
+            x: -750,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top 0%",
+                end: "top -50%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        "#broth-title-2",
+        {x: 0},
+        {
+            x: -500,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top 0%",
+                end: "top -50%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".broth-def",
+        {y: 500},
+        {
+            y: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -30%",
+                end: "top -80%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".broth-title",
+        {y: 0},
+        {
+            y: -850,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -80%",
+                end: "top -200%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".broth-def",
+        {y: 0},
+        {
+            y: -850,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -80%",
+                end: "top -200%",
                 scrub: true,
             },
         }
