@@ -365,6 +365,7 @@ section.vid div.mission div:hover .circle_cursor {
     justify-content: center;
     top: 50vh;
     left: 45vh;
+    z-index: 10;
 }
 
 .sp-benefits-container {
@@ -417,14 +418,27 @@ section.vid div.mission div:hover .circle_cursor {
     top: 83vh;
 }
 
+.broth-title {
+    font-family: "Subjectivity-Bold", serif;
+    color: #ff6a00;
+    font-size: 10vh;
+    text-align: center;
+    padding-top: 10vh;
+    z-index: 1000;
+}
 
-
+.our-broth {
+    height: 100vh;
+}
 
 .placeholder{
     height: 200vh;
 }
 
-/*Lenis*/
+
+
+
+/*DO NOT TOUCH BELOW - Preloaded styles for scrolling behavior from Lenis*/
 html.lenis,
 html.lenis body {
     height: auto;
@@ -441,5 +455,6 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
     pointer-events: none;
 }
+/*DO NOT TOUCH ABOVE*/
 
 

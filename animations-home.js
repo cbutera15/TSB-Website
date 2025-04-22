@@ -280,4 +280,19 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         }
     );
+
+    gsap.fromTo(
+        ".benefits-title",
+        {y: -50},
+        {
+            y: -750,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top 100%",
+                end: "top 20%",
+                scrub: true,
+            },
+        }
+    );
 });
