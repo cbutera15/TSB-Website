@@ -88,6 +88,43 @@ header {
     width: 30vw;
 }
 
+.promotion{
+    left: 20vh;
+    width: 30vw;
+    height: 45vh;
+    border-radius: 4vh;
+    border: purple 2px solid;
+}
+
+.broth > .promotion{
+    position: absolute;
+    top: 285vh;
+}
+
+.frozen > .promotion{
+    position: absolute;
+    top: 400vh;
+}
+
+.promotion-right{
+    position: absolute;
+    right: 20vh;
+    top: 240.5vh;
+    width: 30vw;
+    height: 45vh;
+    border-radius: 4vh;
+    border: purple 2px solid;
+}
+
+
+.column{
+    width: 99vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
 .row {
     width: 99vw;
     height: 45vh;
@@ -95,11 +132,14 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: #ff6a00 2px solid;
 }
 
 .short{
     width: 71vw;
+}
+
+.tall{
+    height: 90vh
 }
 
 .right{
@@ -108,12 +148,33 @@ header {
 }
 
 .item {
+    overflow: hidden;
     height: 40vh;
     width: 40vh;
     margin-left: 10vh;
     margin-right: 10vh;
     border-radius: 2vh;
     border: blue 2px solid;
+}
+
+.item > button{
+    border: none;
+    display: block;
+    background: #ff6a00;
+    opacity: 0.5;
+    height: 7.5vh;
+    width: 40vh;
+    position: relative;
+    top: 32vh;
+}
+
+.item > button:hover{
+    opacity: 1;
+}
+
+.favorites .item{
+    margin-left: 7.5vh;
+    margin-right: 7.5vh;
 }
 
 
