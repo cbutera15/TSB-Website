@@ -1,0 +1,120 @@
+@font-face { font-family: Subjectivity-Regular; src: url('./fonts/Subjectivity-Regular.otf'); }
+@font-face { font-family: Subjectivity-Medium; src: url('./fonts/Subjectivity-Medium.otf'); }
+@font-face { font-family: Subjectivity-Bold; src: url('./fonts/Subjectivity-Bold.otf'); }
+@font-face { font-family: Gluten-Medium; src: url('./fonts/Gluten-Medium.otf'); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #fafaee;
+    color: #1D3557;
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/home/title-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    /*transition: all ease-in-out 0.2s;*/
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title {
+    justify-content: left;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #fafaee;
+    font-size: 9.2vw;
+    position: absolute;
+    top: 40.8vh;
+    opacity: 0;
+    filter: blur(50px);
+    animation: fadeIn 2s ease-out forwards;
+    margin: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #ff6a00;
+    font-size: 5vw;
+}
+
+.orange {
+    color: #ff6a00;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        margin: 0;
+    }
+}
+
+.empty {
+    height: 10vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: red 2px solid;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites {
+    height: 50vh;
+}
+
+.favorites > .row > .item{
+    width: 30vw;
+}
+
+.row {
+    width: 99vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: #ff6a00 2px solid;
+}
+
+.short{
+    width: 71vw;
+}
+
+.right{
+    position: relative;
+    left: 28vw;
+}
+
+.item {
+    height: 40vh;
+    width: 40vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    border-radius: 2vh;
+    border: blue 2px solid;
+}
+
+
+
