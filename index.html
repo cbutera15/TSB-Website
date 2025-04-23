@@ -417,74 +417,72 @@
             </div>
         </div>
     </div>
-    <div class="placeholder"></div>
+    <div class="our-broth">
+        <div class="broth-title">
+            <p id="broth-title-1">Our</p>
+            <p id="broth-title-2">Broth</p>
+        </div>
+        <div class="broth-def">
+            <p id="broth-def-1">
+                noun
+            </p>
+            <p id="broth-def-2">
+                /brôTH,bräTH/
+            </p>
+            <p>
+                1. A liquid made by simmering bones, meat, or vegetables in water, often used as a base for soups,
+                sauces, and gravies.
+            </p>
+        </div>
+        <div class="broth-photos">
+            <div class="broth-photo-1">
+                <img src="images/home/our-broth-1.jpg" alt="" height="400">
+            </div>
+        </div>
+        <div class="broth-description">
+            <p>
+                Our focus on extracting as much healing collagen as possible is what sets us apart. When cold, our
+                broth is the consistency of jell-o, a key indicator of an abundance of collagen.
+                Don't worry, that jiggly mass heats to a delicious, soul-warming liquid and is meant to be sipped
+                just like coffee or tea.
+            </p>
+        </div>
+    </div>
+<!--    <div class="placeholder"></div>-->
 </main>
+<footer>
+    <div class="footer-content">
+        <div class="footer-spinning-text">
+            <img src="images/home/spinning-text.png" alt="" height="300" id="spinning-text">
+        </div>
+        <div class="footer-logo">
+<!--            <img src="images/home/logo.png" alt="" height="275">-->
+        </div>
+        <div class="footer-info">
+            <div class="footer-address">
+                <p>The Simmering Bone</p>
+                <p>57 Commerce Avenue</p>
+                <p>South Burlington, VT, 05403</p>
+            </div>
+            <div class="footer-number">
+                <p>802-578-7579</p>
+            </div>
+            <div class="footer-email">
+                <p>simmervt@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--Video Scrubbing Script-->
 <script src="scrubbing.js"></script>
+
+<!--Cursor Stuff-->
 <div class="circle_cursor"></div>
-<script>
-    // HOVER EFFECTS
-    document.addEventListener('DOMContentLoaded', () => {
-        const missionDivs = document.querySelectorAll('section.vid div.mission div');
-        const buttonDivs = document.querySelectorAll('.buttons button');
-
-        const statementSection = document.querySelector('.brand-statement');
-        const aboutSection = document.querySelector('.quick-about');
-
-        const circleCursor = document.querySelector('.circle_cursor');
-
-        missionDivs.forEach(div => {
-            div.addEventListener('mouseenter', () => {
-                circleCursor.style.width = '30px';
-                circleCursor.style.height = '30px';
-                circleCursor.style.backgroundColor = '#ff6a00';
-            });
-
-            div.addEventListener('mouseleave', () => {
-                circleCursor.style.width = '20px';
-                circleCursor.style.height = '20px';
-                circleCursor.style.backgroundColor = '#fafaee';
-            });
-        });
-
-        buttonDivs.forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                circleCursor.style.width = '30px';
-                circleCursor.style.height = '30px';
-                circleCursor.style.backgroundColor = '#ff6a00';
-            });
-
-            button.addEventListener('mouseleave', () => {
-                circleCursor.style.width = '20px';
-                circleCursor.style.height = '20px';
-                circleCursor.style.backgroundColor = '#fafaee';
-            });
-        });
-
-        statementSection.addEventListener('mouseenter', () => {
-            circleCursor.style.backgroundColor = '#ff6a00';
-        });
-
-        statementSection.addEventListener('mouseleave', () => {
-            circleCursor.style.width = '20px';
-            circleCursor.style.height = '20px';
-            circleCursor.style.backgroundColor = '#fafaee';
-        });
-
-        aboutSection.addEventListener('mouseenter', () => {
-            circleCursor.style.backgroundColor = '#ff6a00';
-        });
-
-        aboutSection.addEventListener('mouseleave', () => {
-            circleCursor.style.width = '20px';
-            circleCursor.style.height = '20px';
-            circleCursor.style.backgroundColor = '#fafaee';
-        });
-    });
-
-
-
-</script>
+<script src="cursor-hover-effects.js"></script>
 <script src="cursor.js"></script>
+
+<!--Lenis Stuff (DO NOT TOUCH)-->
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
