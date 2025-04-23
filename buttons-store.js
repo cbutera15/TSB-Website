@@ -30,23 +30,38 @@ let idPriceDict = {
 for (let i = 1; i <= 9; i++) {
     const button = document.getElementById(`b${i}`);
     if (button) {
-      button.addEventListener("click", () => addToCart(`"b${i}"`));
+      button.addEventListener("click", () => addToCart(`b${i}`));
       console.log(i)
     }
+}
+
+for (let i = 1; i <= 9; i++){
+  const button = document.getElementById(`p${i}`)
+  if (button){
+    button.addEventListener('click', () => addToCart(`"b${i}"`));
+    console.log("b",i)
+  }
 }
 
 for (let i = 1; i <= 6; i++){
   const button = document.getElementById(`f${i}`)
   if (button){
     button.addEventListener('click', () => addToCart(`"f${i}"`));
-    console.log(i)
   }
 }
 
 for (let i = 1; i <= 4; i++){
   const button = document.getElementById(`fav${i}`)
   if (button){
-    button.addEventListener(button.className);
+    button.addEventListener('click', () => addToCart(button.className));
+  }
+}
+
+for (let i = 1; i <= 4; i++){
+  const button = document.getElementById(`pf${i}`)
+  if (button){
+    button.addEventListener('click', () => addToCart(button.className))
+    console.log("phone",i)
   }
 }
 
@@ -54,7 +69,7 @@ class Item {
   constructor(id, amount){
     this.id = id
     this.name = idNameDict[id];
-    this.price = idPriceDict[id]
+    this.price = idPriceDict[id];
     this.amount = amount;
     
   }
@@ -67,7 +82,7 @@ class Item {
 
 function addToCart(id){
   for (let i=0; i < cart.length; i++){
-    if (cart[i].name == id){
+    if (cart[i].id == id){
       cart[i].addAnother()
       updateCart()
       return

@@ -278,7 +278,6 @@ header {
     margin-left: 10vh;
     margin-right: 10vh;
     border-radius: 5vh;
-    border: red 2px solid;
 }
 
 .item button{
@@ -370,7 +369,6 @@ header {
     .phone > .container{
         display: flex;
         flex-direction: column;
-        border: red 2px solid;
     }
 
     .grid{
