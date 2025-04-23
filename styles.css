@@ -428,7 +428,7 @@ section.vid div.mission div:hover .circle_cursor {
 }
 
 .our-broth {
-    height: 450vh;
+    height: 400vh;
 }
 
 .broth-title {
@@ -473,6 +473,25 @@ section.vid div.mission div:hover .circle_cursor {
     top: 32vh;
     left: 50vw;
     padding-right: 10vw;
+}
+
+.footer-content {
+    height: 70vh;
+    background-color: #ff6a00;
+}
+
+.footer-spinning-text {
+    padding-top: 7vh;
+    padding-left: 7vh;
+}
+
+.footer-info {
+    position: fixed;
+    font-family: "Subjectivity-Bold", serif;
+    color: #fafaee;
+    font-size: 5vh;
+    right: 10vh;
+    bottom: 25vh;
 }
 
 .placeholder {

@@ -461,4 +461,30 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         }
     );
+
+    gsap.fromTo(
+        ".buttons",
+        {y: 0},
+        {
+            y: 75,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -270%",
+                end: "top -370%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.to(
+        "#spinning-text",
+        {
+            rotation: 360,
+            duration: 15,
+            ease: "none",
+            repeat: -1,
+            transformOrigin: "50% 50%",
+        }
+    )
 });
