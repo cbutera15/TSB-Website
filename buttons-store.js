@@ -2,6 +2,30 @@ const cartDisplay = document.getElementById("cart-display")
 const priceDisplay = document.getElementById("total-price")
 let cart = []
 
+let idNameDict = {
+  "b1":"Classic Chicken Quart",
+  "b2":"Classic Chicken Pint",
+  "b3":"Apple Pork",
+  "b4":"Chicken and Lemongrass",
+  "b5":"Tomato and Beef",
+  "b6":"Spiced Lamb",
+  "b7":"Digestion",
+  "b8":"Adaptpgen",
+  "b9":"Immune Boost"
+}
+
+let idPriceDict = {
+  "b1":17.0,
+  "b2":10.0,
+  "b3":19.0,
+  "b4":21.0,
+  "b5":21.0,
+  "b6":19.0,
+  "b7":21.0,
+  "b8":20.0,
+  "b9":19.0
+}
+
 
 for (let i = 1; i <= 9; i++) {
     const button = document.getElementById(`b${i}`);
@@ -19,11 +43,20 @@ for (let i = 1; i <= 6; i++){
   }
 }
 
+for (let i = 1; i <= 4; i++){
+  const button = document.getElementById(`fav${i}`)
+  if (button){
+    button.addEventListener(button.className);
+  }
+}
+
 class Item {
-  constructor(name, amount){
-    this.name = name;
+  constructor(id, amount){
+    this.id = id
+    this.name = idNameDict[id];
+    this.price = idPriceDict[id]
     this.amount = amount;
-    this.price = 10;
+    
   }
 
   addAnother(){
@@ -41,7 +74,6 @@ function addToCart(id){
     }
   }
   cart.push(new Item(id,1))
-  console.log(cart)
   updateCart()
   return
 }
@@ -58,6 +90,7 @@ function updateCart() {
   for (let i = 0; i < cart.length; i++) {
     const item = cart[i];
     let li = document.createElement("li")
+    console.log(li)
     li.textContent = `${item.name} x ${item.amount} - $${item.amount * item.price}`
     cartDisplay.appendChild(li);
     sum += item.amount * item.price
