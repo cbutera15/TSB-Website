@@ -476,13 +476,13 @@ section.vid div.mission div:hover .circle_cursor {
 }
 
 .footer-content {
-    height: 70vh;
+    height: 45vh;
     background-color: #ff6a00;
 }
 
 .footer-spinning-text {
-    padding-top: 7vh;
-    padding-left: 7vh;
+    padding-top: 6vh;
+    padding-left: 6vh;
 }
 
 .footer-info {
