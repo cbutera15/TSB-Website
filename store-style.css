@@ -15,6 +15,10 @@ html, body {
     max-width: 100%;
 }
 
+body{
+    z-index: 0;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -78,7 +82,7 @@ header {
     margin: 5vh;
     filter: blur(50px);
     animation: fadeIn 3s ease-out forwards;
-    z-index: 10003;
+    z-index: 3;
 }
 
 .buttons button{
@@ -111,6 +115,69 @@ header {
     opacity: 0;
 }
 
+#nav-bar{
+    width: 100vw;
+    height: 15vh;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background-color: #fafaee;
+    opacity: 0.7;
+}
+
+.sidebar{
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    right: 100vw;
+    background-color: #fafaee;
+}
+
+.sidebar form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.sidebar label{
+    padding: 2vh;
+    margin: 2vh;
+}
+
+.showing{
+    left: 0;
+    z-index: 100;
+}
+
+#sbbtndiv{
+    z-index: 101;
+    position: absolute;
+    top: 5vh;
+    left: 15vh;
+    width: 5vh;
+    height: 5vh;
+    border: red 2px solid;
+}
+
+#sidebarbtn{
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    opacity: 0.1;
+}
+
+.fixed {
+    position: fixed !important;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
 .empty {
     height: 10vh;
 }
@@ -118,7 +185,6 @@ header {
 .container {
     display: flex;
     flex-direction: column;
-    border: red 2px solid;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -147,13 +213,16 @@ header {
 
 .frozen > .promotion{
     position: absolute;
-    top: 400vh;
+    top: 397.5vh;
 }
 
-.frozen > .promotion > .a{
-    position: absolute;
-    top: 400vh;
+.promotion.a{
     left: 0;
+    background-color: #ff6a00;
+}
+
+.promotion.b{
+    left: 70vw;
 }
 
 .promotion-right{
@@ -203,7 +272,7 @@ header {
     width: 40vh;
     margin-left: 10vh;
     margin-right: 10vh;
-    border-radius: 2vh;
+    border-radius: 5vh;
     border: blue 2px solid;
 }
 
@@ -227,5 +296,21 @@ header {
     margin-right: 7.5vh;
 }
 
+@media (max-aspect-ratio: 16/9) {
+    .promotion, .promotion-right {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      margin: 2vh auto;
+      width: 80vw;
+      height: 35vh;
+      display: block;
+    }
+  
+    .right {
+      left: 0 !important;
+    }
+  }
 
 
