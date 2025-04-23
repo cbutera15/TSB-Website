@@ -273,10 +273,10 @@ header {
     margin-left: 10vh;
     margin-right: 10vh;
     border-radius: 5vh;
-    border: blue 2px solid;
 }
 
-.item > button{
+.item button{
+    z-index: 2;
     border: none;
     display: block;
     background: #ff6a00;
@@ -284,7 +284,55 @@ header {
     height: 7.5vh;
     width: 40vh;
     position: relative;
-    top: 32vh;
+    top: 33vh;
+}
+
+#i1{
+    background-image: url(images/home/store/classic-chicken.png);
+}
+
+#i2{
+    background-image: url(images/home/store/classic-chicken-p.jpg);
+    background-size: 120%;
+}
+
+#i3{
+    background-image: url(images/home/store/apple-pork.jpg);
+}
+
+#i4{
+    background-image: url(images/home/store/lemongrass-chicken.png);
+    background-size: 100%;
+}
+
+#i5{
+    background-image: url(images/home/store/tomato-beef.jpg);
+    background-size: 100%;
+    background-position: bottom;
+}
+
+#i6{
+    background-image: url(images/home/store/lamb.jpg);
+    background-size: 100%;
+}
+
+#i7{
+    background-image: url(images/home/store/a-digestion.png);
+    background-size: 100%;
+}
+
+#i8{
+    background-image: url(images/home/store/a-special.png);
+    background-size: 100%;
+}
+
+#i9{
+    background-image: url(images/home/store/immune.jpg);
+    background-size: 100%;
+}
+
+.item{
+    background-position: center;
 }
 
 .item > button:hover{
