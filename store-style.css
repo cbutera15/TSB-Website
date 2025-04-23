@@ -147,13 +147,16 @@ header {
 
 .frozen > .promotion{
     position: absolute;
-    top: 400vh;
+    top: 397.5vh;
 }
 
-.frozen > .promotion > .a{
-    position: absolute;
-    top: 400vh;
+.promotion.a{
     left: 0;
+    background-color: #ff6a00;
+}
+
+.promotion.b{
+    left: 70vw;
 }
 
 .promotion-right{
@@ -203,7 +206,7 @@ header {
     width: 40vh;
     margin-left: 10vh;
     margin-right: 10vh;
-    border-radius: 2vh;
+    border-radius: 5vh;
     border: blue 2px solid;
 }
 
@@ -227,5 +230,21 @@ header {
     margin-right: 7.5vh;
 }
 
+@media (max-aspect-ratio: 16/9) {
+    .promotion, .promotion-right {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      margin: 2vh auto;
+      width: 80vw;
+      height: 35vh;
+      display: block;
+    }
+  
+    .right {
+      left: 0 !important;
+    }
+  }
 
 
