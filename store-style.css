@@ -352,7 +352,7 @@ header {
     margin-right: 7.5vh;
 }
 
-@media (max-aspect-ratio: 16/9) {
+@media (max-aspect-ratio: 16/10) {
     .promotion, .promotion-right {
       position: relative !important;
       top: auto !important;
