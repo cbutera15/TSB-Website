@@ -1,0 +1,231 @@
+@font-face { font-family: Subjectivity-Regular; src: url('./fonts/Subjectivity-Regular.otf'); }
+@font-face { font-family: Subjectivity-Medium; src: url('./fonts/Subjectivity-Medium.otf'); }
+@font-face { font-family: Subjectivity-Bold; src: url('./fonts/Subjectivity-Bold.otf'); }
+@font-face { font-family: Gluten-Medium; src: url('./fonts/Gluten-Medium.otf'); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #fafaee;
+    color: #1D3557;
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/home/title-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    /*transition: all ease-in-out 0.2s;*/
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title {
+    justify-content: left;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #fafaee;
+    font-size: 9.2vw;
+    position: absolute;
+    top: 40.8vh;
+    opacity: 0;
+    filter: blur(50px);
+    animation: fadeIn 2s ease-out forwards;
+    margin: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #ff6a00;
+    font-size: 5vw;
+}
+
+.orange {
+    color: #ff6a00;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        margin: 0;
+    }
+}
+
+.buttons{
+    /*border: red 2px solid;*/
+    display: flex;
+    align-items: center;
+    height: 8vw;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    margin: 5vh;
+    filter: blur(50px);
+    animation: fadeIn 3s ease-out forwards;
+    z-index: 10003;
+}
+
+.buttons button{
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+    margin: 6vh;
+    color: #fafaee;
+    font-size: 4.6vw;
+    transition: ease-in-out 0.2s;
+}
+
+.buttons button:hover{
+    transform: scale(1.05);
+    transition: transform ease-in-out 0.2s;
+    animation: glow 5s ease-in-out infinite alternate;
+}
+
+.buttons-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200vh;
+    height: 14%;
+    z-index: 1002;
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+}
+
+.empty {
+    height: 10vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: red 2px solid;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites {
+    height: 50vh;
+}
+
+.favorites > .row > .item{
+    width: 30vw;
+}
+
+.promotion{
+    left: 20vh;
+    width: 30vw;
+    height: 45vh;
+    border-radius: 4vh;
+    border: purple 2px solid;
+}
+
+.broth > .promotion{
+    position: absolute;
+    top: 285vh;
+}
+
+.frozen > .promotion{
+    position: absolute;
+    top: 400vh;
+}
+
+.frozen > .promotion > .a{
+    position: absolute;
+    top: 400vh;
+    left: 0;
+}
+
+.promotion-right{
+    position: absolute;
+    right: 20vh;
+    top: 240.5vh;
+    width: 30vw;
+    height: 45vh;
+    border-radius: 4vh;
+    border: purple 2px solid;
+}
+
+
+.column{
+    width: 99vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row {
+    width: 99vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.short{
+    width: 71vw;
+}
+
+.tall{
+    height: 90vh
+}
+
+.right{
+    position: relative;
+    left: 28vw;
+}
+
+.item {
+    overflow: hidden;
+    height: 40vh;
+    width: 40vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    border-radius: 2vh;
+    border: blue 2px solid;
+}
+
+.item > button{
+    border: none;
+    display: block;
+    background: #ff6a00;
+    opacity: 0.5;
+    height: 7.5vh;
+    width: 40vh;
+    position: relative;
+    top: 32vh;
+}
+
+.item > button:hover{
+    opacity: 1;
+}
+
+.favorites .item{
+    margin-left: 7.5vh;
+    margin-right: 7.5vh;
+}
+
+
+
