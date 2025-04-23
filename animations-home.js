@@ -362,6 +362,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             y: 0,
             duration: 2,
+            ease: "none",
             scrollTrigger: {
                 trigger: ".our-broth",
                 start: "top -30%",
@@ -396,6 +397,66 @@ document.addEventListener("DOMContentLoaded", function() {
                 trigger: ".our-broth",
                 start: "top -80%",
                 end: "top -200%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".broth-photo-1",
+        {x: -1000},
+        {
+            x: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -100%",
+                end: "top -220%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".broth-description",
+        {x: 1000},
+        {
+            x: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -100%",
+                end: "top -220%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".broth-photo-1",
+        {y: 0},
+        {
+            y: -750,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -250%",
+                end: "top -350%",
+                scrub: true,
+            },
+        }
+    );
+
+    gsap.fromTo(
+        ".broth-description",
+        {y: 0},
+        {
+            y: -750,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".our-broth",
+                start: "top -250%",
+                end: "top -350%",
                 scrub: true,
             },
         }

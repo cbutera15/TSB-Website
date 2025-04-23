@@ -428,7 +428,7 @@ section.vid div.mission div:hover .circle_cursor {
 }
 
 .our-broth {
-    height: 200vh;
+    height: 450vh;
 }
 
 .broth-title {
@@ -462,7 +462,17 @@ section.vid div.mission div:hover .circle_cursor {
 .broth-photo-1 {
     position: fixed;
     top: 30vh;
-    left: 60vw;
+    left: 15vw;
+}
+
+.broth-description {
+    position: fixed;
+    font-family: "Subjectivity-Regular", serif;
+    color: #ff6a00;
+    font-size: 4vh;
+    top: 32vh;
+    left: 50vw;
+    padding-right: 10vw;
 }
 
 .placeholder {
