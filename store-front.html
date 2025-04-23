@@ -5,28 +5,59 @@
     <link rel="stylesheet" href="store-style.css">
     <meta name="theme-color" content="#ff6a00">
     <title>Shop The Simmering Bone</title>
+    <!-- GSAP Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- ScrollTrigger Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="animations-store.js"></script>
 </head>
 <body>
 <header>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="animations-store.js"></script>
+    <div id="nav-bar"></div>
     <div class="title">
         <p class="orange">M</p>
         <p>ARKET</p>
     </div>
-    <div class="buttons-background"></div>
     <div class="buttons">
-        <button>MARKET</button>
+        <button>HOME</button>
         <button>INGREDIENTS</button>
         <button>ABOUT US</button>
     </div>
-    <script src="nav-buttons.js"></script>
+    <div id="sidebar"class="sidebar">
+        <form action="">
+            <h2>Your Cart</h2>
+    
+            <div id="cart-items">
+                <ul id="cart-display">
+                    No items in cart.
+                </ul>
+                <p id="total-price"></p>
+            </div>
+            <hr>
+            <h3>Customer Info</h3>
+            <label>
+                Name:
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Address:
+                <input name="address" required></input>
+            </label>
+            <button type="submit">Checkout</button>
+        </form>
+    </div>
+    <div id="sbbtndiv" class="sbbtndiv">
+        <button id="sidebarbtn"><img src=""/></button>
+    </div>
 </header>
 <main>
     <div class="empty"></div>
     <div class="container">
-        <h2 class="subtitle">Best Sellers</h2>
+        <h2 id="best-seller-subtitle" class="subtitle">Best Sellers</h2>
         <div class="favorites">
             <div class="row">
                 <div class="item">
@@ -39,7 +70,7 @@
         </div>
     </div>
 
-    <div class="empty"></div>
+    <div id="trigger-e" class="empty"></div>
     
     <div class="container">
         <h2 class="subtitle">Broth</h2>
@@ -113,7 +144,9 @@
             <div class="tall promotion b"></div>
         </div>
     </div>
-    <script src="buttons-store.js"></script>
 </main>
 </body>
+<script src="buttons-store.js"></script>
+<script src="side-bar-button.js"></script>
+<script src="nav-buttons.js"></script>
 </html>
