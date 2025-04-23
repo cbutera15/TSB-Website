@@ -354,7 +354,7 @@ section.vid div.mission div:hover .circle_cursor {
     height: 300vh;
     background-color: #fafaee;
     color: #fafaee;
-    font-family: "Gluten-Medium", serif;
+    font-family: "Subjectivity-Regular", serif;
     font-size: 10vh;
     text-align: center;
 }
@@ -487,11 +487,17 @@ section.vid div.mission div:hover .circle_cursor {
 
 .footer-info {
     position: fixed;
-    font-family: "Subjectivity-Bold", serif;
+    font-family: "Subjectivity-Medium", serif;
     color: #fafaee;
     font-size: 5vh;
     right: 10vh;
-    bottom: 25vh;
+    bottom: 9.5vh;
+}
+
+.footer-logo {
+    position: fixed;
+    right: 90vh;
+    bottom: 7vh;
 }
 
 .placeholder {

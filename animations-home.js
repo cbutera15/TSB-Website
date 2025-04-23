@@ -466,7 +466,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ".buttons",
         {y: 0},
         {
-            y: 75,
+            y: 200,
             duration: 2,
             scrollTrigger: {
                 trigger: ".our-broth",
@@ -485,6 +485,21 @@ document.addEventListener("DOMContentLoaded", function() {
             ease: "none",
             repeat: -1,
             transformOrigin: "50% 50%",
+        }
+    );
+
+    gsap.fromTo(
+        ".footer-info",
+        {x: 1000},
+        {
+            x: -200,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".footer-content",
+                start: "top 100%",
+                end: "top 60%",
+                scrub: true,
+            },
         }
     )
 });

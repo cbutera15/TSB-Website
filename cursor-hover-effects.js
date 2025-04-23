@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutSection = document.querySelector('.quick-about');
     const benefitsSection = document.querySelector('.health-benefits');
     const brothSection = document.querySelector('.our-broth');
+    const footerSection = document.querySelector('.footer-content');
 
     const circleCursor = document.querySelector('.circle_cursor');
 
@@ -64,6 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     brothSection.addEventListener('mouseenter', () => {
         circleCursor.style.backgroundColor = '#ff6a00';
+    });
+
+    footerSection.addEventListener('mouseenter', () => {
+        circleCursor.style.backgroundColor = '#fafaee';
     });
 });
 
