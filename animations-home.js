@@ -358,9 +358,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".broth-def",
-        {y: 500},
+        {y: 500, opacity: 0},
         {
             y: 0,
+            opacity: 1,
             duration: 2,
             ease: "none",
             scrollTrigger: {
