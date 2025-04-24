@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles-about.css">
+    <meta name="theme-color" content="#ff6a00">
+    <title>About Us</title>
+</head>
+<body>
+<header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="animations-about.js"></script>
+  <div class="title">
+    <p class="orange">T</p>
+    <p>HE <p>
+    <p class="orange">S</p>
+    <p>IMMERING </p>
+    <p class="orange">B</p>
+    <p>ONE</p>
+  </div>
+  <div class="subtitle">
+    <p>A Little About Us</p>
+  </div>
+  <div class="market-CTA">
+    <div class="market-CTA-blob">
+      <!--            <img src="images/home/blob-1.svg" alt="Blob" height="300">-->
+    </div>
+    <div class="market-CTA-blurb">
+      <p>Shop our broth here!</p>
+    </div>
+    <div class="market-CTA-arrow">
+      <img src="images/home/scribbles/market-scribble.svg" alt="Arrow" height="100">
+    </div>
+  </div>
+  <div class="buttons-background"></div>
+  <div class="buttons">
+    <button onclick="document.location='store-front.html'">MARKET</button>
+    <button>INGREDIENTS</button>
+    <button onclick="document.location='index.html'">HOME</button>
+  </div>
+</header>
+<main>
+  <div class="quick-hello">
+    <div class="hello-title">
+      <div class="word" style="position: relative; display: inline-block;">
+        <div class="char, char1" style="position: relative; display: inline-block;">H</div>
+        <div class="char, char2" style="position: relative; display: inline-block;">e</div>
+        <div class="char, char3" style="position: relative; display: inline-block;">l</div>
+        <div class="char, char4" style="position: relative; display: inline-block;">l</div>
+        <div class="char, char5" style="position: relative; display: inline-block;">o</div>
+        <div class="char, char6" style="position: relative; display: inline-block;">!</div>
+      </div>
+    </div>
+    <div class="hello-subheadings">
+      <div class="hello-sub-1">
+        <p>We are <b>The Simmering Bone</b>, delivering sustainably produced broth out of stunning <b>Vermont</b>. </p>
+      </div>
+      <div class="hello-sub-2">
+        <p> We strive to make the highest quality and best tasting broth you've ever had.</p>
+      </div>
+      <div class="hello-sub-3">
+          <p>We are a small team of passionate broth enthusiasts, and we can't wait to share our love of broth with you.</p>
+      </div>
+    </div>
+    <div class="hello-images">
+      <div class="vermont-scribble">
+        <img src="images/about/hello-scribble.svg" alt="" height="100">
+      </div>
+      <div class="vermont-image">
+        <img src="images/about/vermont.png" alt="" height="432">
+      </div>
+      <div class="bone-scribble">
+        <img src="images/about/hello-scribble.svg" alt="" height="100">
+      </div>
+      <div class="bone-logo">
+        <img src="images/about/logo.png" alt="" height="533">
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<!--Lenis stuff (DO NOT TOUCH)-->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const lenis = new Lenis({
+      duration: 1.3,
+      smooth: true,
+      smoothTouch: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+</script>
+<div class="circle_cursor"></div>
+<script src="cursor-hover-effects-about.js"></script>
+<script src="global-js/cursor.js"></script>
+</body>
+</html>

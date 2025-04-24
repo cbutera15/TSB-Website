@@ -22,7 +22,7 @@ html, body {
     height: 20px;
     border-radius: 100%;
     background-color: #fafaee;
-    border: #ff6a00 2px solid;
+    border: #ff6a00 4px double;
     top: -20px;
     left: -20px;
     pointer-events: none;
