@@ -10,6 +10,11 @@
     cursor: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 html, body {
     background-color: #fafaee;
     color: #1D3557;
