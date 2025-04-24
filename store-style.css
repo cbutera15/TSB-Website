@@ -185,7 +185,6 @@ header {
 .amount-container button{
     background-color: transparent;
     border: none;
-    border-radius: 100%;
     margin-left: 1vh;
     margin-right: 1vh;
     width: 2vh;
@@ -275,12 +274,13 @@ header {
     width: 30vw;
     height: 45vh;
     border-radius: 4vh;
-    border: purple 2px solid;
 }
 
 .broth > .promotion{
     position: absolute;
     top: 285vh;
+    background-image: url(images/home/store/landscape-farm.jpg);
+    background-position: center;
 }
 
 .frozen > .promotion{
@@ -304,7 +304,6 @@ header {
     width: 30vw;
     height: 45vh;
     border-radius: 4vh;
-    border: purple 2px solid;
     background-image: url(images/home/store/placeholder.jpeg);
     background-size: cover;
     background-position: center;
@@ -418,6 +417,10 @@ header {
 .item > button:hover{
     opacity: 0;
     animation: fadeIn 0.7s forwards;
+}
+
+.item button:active{
+    background-color: #ce5b08;
 }
 
 .favorites .item{
