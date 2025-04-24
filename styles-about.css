@@ -194,13 +194,84 @@ header {
 }
 
 .quick-hello {
-    height: 100vh;
+    height: 300vh;
 }
 
 .hello-title {
-    font-size: 6vw;
+    font-size: 10vw;
     font-family: 'Subjectivity-Bold', serif;
     color: #ff6a00;
     justify-self: center;
     text-align: center;
+    padding-top: 35vh;
 }
+
+.word {
+    font-family: "Gluten-Medium", serif;
+}
+
+.char {
+    color: #ff6a00;
+    transition: all 0.1s ease-in-out;
+    z-index: -9999;
+    position: relative;
+    padding: 0;
+}
+
+.hello-subheadings {
+    font-size: 4vw;
+    font-family: 'Subjectivity-Regular', serif;
+    color: #ff6a00;
+    justify-self: center;
+    text-align: center;
+}
+
+.hello-subheadings div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vermont-scribble {
+    position: fixed;
+    top: 60%;
+    left: 60%;
+    rotate: -100deg;
+    transform: translate(-50%, -50%);
+}
+
+.vermont-image {
+    position: fixed;
+    top: 80%;
+    left: 73%;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.bone-scribble {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    rotate: 70deg;
+    transform: translate(-50%, -50%);
+}
+
+.bone-logo {
+    position: fixed;
+    top: 20%;
+    left: 45%;
+    transform: translate(-50%, -50%) scale(0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
