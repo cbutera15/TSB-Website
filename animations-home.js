@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-1",
-        {x: 1800},
+        {x: 2000},
         {
             x: -500,
             duration: 5,
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-2",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1500,
             duration: 5,
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-3",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1300,
             duration: 5,
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-4",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1500,
             duration: 5,
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-5",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1500,
             duration: 5,
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-6",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1500,
             duration: 5,
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-7",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1500,
             duration: 5,
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-8",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1500,
             duration: 5,
@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-9",
-        {x: 1800},
+        {x: 2000},
         {
             x: -1500,
             duration: 5,
