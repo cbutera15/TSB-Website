@@ -1,6 +1,5 @@
 const cartDisplay = document.getElementById("cart-display")
 const priceDisplay = document.getElementById("total-price")
-let cart = []
 
 //get name from id
 let idNameDict = {
@@ -28,49 +27,6 @@ let idPriceDict = {
   "b9":19.0
 }
 
-//creates event listeners for the broth section buttons
-for (let i = 1; i <= 9; i++) {
-    const button = document.getElementById(`b${i}`);
-    if (button) {
-      button.addEventListener("click", () => addToCart(`b${i}`));
-      console.log(i)
-    }
-}
-
-//creates event listeners for the broth section buttons when
-// the media query is active
-for (let i = 1; i <= 9; i++){
-  const button = document.getElementById(`p${i}`)
-  if (button){
-    button.addEventListener('click', () => addToCart(`b${i}`));
-    console.log("b",i)
-  }
-}
-
-//creates event listeners for the frozen(name might change) section
-for (let i = 1; i <= 4; i++){
-  const button = document.getElementById(`f${i}`)
-  if (button){
-    button.addEventListener('click', () => addToCart(`f${i}`));
-  }
-}
-
-//creates event listeners for the best sellers section
-for (let i = 1; i <= 4; i++){
-  const button = document.getElementById(`fav${i}`)
-  if (button){
-    button.addEventListener('click', () => addToCart(button.className));
-  }
-}
-
-//does the above but with the media query
-for (let i = 1; i <= 4; i++){
-  const button = document.getElementById(`pf${i}`)
-  if (button){
-    button.addEventListener('click', () => addToCart(button.className))
-    console.log("phone",i)
-  }
-}
 
 class Item {
   constructor(id, amount){
@@ -93,9 +49,70 @@ class Item {
 
 }
 
+let cart = []
+storedCart = JSON.parse(localStorage.getItem('cart'))
+if (storedCart){
+  console.log("loading: " + storedCart)
+  for(let i = 0; i < storedCart.length; i++){
+    cart.push(new Item(storedCart[i].id, storedCart[i].amount))
+  }
+  updateCart()
+}
+
+initButtons()
+
+function initButtons(){
+  //creates event listeners for the broth section buttons
+  for (let i = 1; i <= 9; i++) {
+    const button = document.getElementById(`b${i}`);
+    if (button) {
+      button.addEventListener("click", () => addToCart(`b${i}`));
+      console.log(i)
+    }
+  }
+
+  //creates event listeners for the broth section buttons when
+  // the media query is active
+  for (let i = 1; i <= 9; i++){
+  const button = document.getElementById(`p${i}`)
+  if (button){
+    button.addEventListener('click', () => addToCart(`b${i}`));
+    console.log("b",i)
+  }
+  }
+
+  //creates event listeners for the frozen(name might change) section
+  for (let i = 1; i <= 4; i++){
+  const button = document.getElementById(`f${i}`)
+  if (button){
+    button.addEventListener('click', () => addToCart(`f${i}`));
+  }
+  }
+
+  //creates event listeners for the best sellers section
+  for (let i = 1; i <= 4; i++){
+  const button = document.getElementById(`fav${i}`)
+  if (button){
+    button.addEventListener('click', () => addToCart(button.className));
+  }
+  }
+
+  //does the above but with the media query
+  for (let i = 1; i <= 4; i++){
+  const button = document.getElementById(`pf${i}`)
+  if (button){
+    button.addEventListener('click', () => addToCart(button.className))
+    console.log("phone",i)
+  }
+  }
+
+  document.getElementById("cart-submit").addEventListener('click', () => clearCart())
+}
+
 function addToCart(id){
   for (let i=0; i < cart.length; i++){
     if (cart[i].id == id){
+      console.log(cart[i])
       cart[i].addAnother()
       updateCart()
       return
@@ -117,7 +134,6 @@ function updateTotal(){
 }
 
 function updateCart() {
-  let local = localStorage.getItem('cart')
   cartDisplay.textContent = "";
   priceDisplay.textContent = "TOTAL: $"
   if (cart.length === 0) {
@@ -139,7 +155,7 @@ function updateCart() {
       updateCart()
     }
   }
-  localStorage.setItem('cart',cart)
+  storeCart()
   priceDisplay.textContent += `${sum}`
 }
 
@@ -173,3 +189,14 @@ function makeDivString(item) {
   
   return newDiv
 }
+
+function storeCart(){
+  localStorage.removeItem("cart")
+  localStorage.setItem('cart',JSON.stringify(cart))
+}
+
+function clearCart(){
+  localStorage.removeItem("cart")
+  cart = []
+}
+
