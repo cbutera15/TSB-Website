@@ -105,6 +105,8 @@ function initButtons(){
     console.log("phone",i)
   }
   }
+
+  document.getElementById("cart-submit").addEventListener('click', () => clearCart())
 }
 
 function addToCart(id){
@@ -191,5 +193,10 @@ function makeDivString(item) {
 function storeCart(){
   localStorage.removeItem("cart")
   localStorage.setItem('cart',JSON.stringify(cart))
+}
+
+function clearCart(){
+  localStorage.removeItem("cart")
+  cart = []
 }
 

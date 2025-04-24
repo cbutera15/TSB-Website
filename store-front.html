@@ -9,7 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <!-- ScrollTrigger Plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="animations-store.js"></script>
+<script src="store-js/animations-store.js"></script>
 </head>
 <body>
 <header>
@@ -48,11 +48,11 @@
                 Address:
                 <input name="address" required></input>
             </label>
-            <button type="submit">Checkout</button>
+            <button id="cart-submit" type="submit">Checkout</button>
         </form>
     </div>
     <div id="sbbtndiv" class="sbbtndiv">
-        <button id="sidebarbtn"><img id="btnimg" src="images/home/store/shooping-cart.png"/></button>
+        <button id="sidebarbtn"><img id="btnimg" src="images/store/shooping-cart.png"/></button>
     </div>
 </header>
 <main>
@@ -204,9 +204,10 @@
     </div>
 </main>
 </body>
-<script src="buttons-store.js"></script>
-<script src="side-bar-button.js"></script>
-<script src="nav-buttons.js"></script>
+<script src="store-js/buttons-store.js"></script>
+<script src="store-js/side-bar-button.js"></script>
+<script src="global-js/nav-buttons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
-<script src="smooth-scroll.js"></script>
+<script src="global-js/smooth-scroll.js"></script>
+<script src="global-js/cursor.js"></script>
 </html>
