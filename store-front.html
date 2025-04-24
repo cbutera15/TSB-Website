@@ -24,16 +24,28 @@
         <button>ABOUT US</button>
     </div>
     <div id="sidebar"class="sidebar">
+    <h2>Your Cart</h2>
+
+        <div id="cart-items">
+            <ul id="cart-display">
+                No items in cart.
+                <li>
+                    <div class="cart-item">
+                        <p>Chicken broth - price</p>
+                        <div class="amount-container">
+                            <button class="minus"></button>
+                            <p>amount</p>
+                            <button class="plus"></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p id="total-price">Total: $0</p>
         <form action="">
-            <h2>Your Cart</h2>
-    
-            <div id="cart-items">
-                <ul id="cart-display">
-                    No items in cart.
-                </ul>
-                <p id="total-price"></p>
             </div>
-            <hr>
+            <br>
+            <div class="line"></div>
+            <br>
             <h3>Customer Info</h3>
             <label>
                 Name:
@@ -51,7 +63,7 @@
         </form>
     </div>
     <div id="sbbtndiv" class="sbbtndiv">
-        <button id="sidebarbtn"><img id="btnimg" src="images/home/store/arrow.png"/></button>
+        <button id="sidebarbtn"><img id="btnimg" src="images/home/store/shooping-cart.png"/></button>
     </div>
 </header>
 <main>
@@ -100,7 +112,7 @@
                     <button id="b5">add to cart</button>
                 </div>
             </div>
-            <div class="promotion-right"></div>
+            <div id="first-promotion" class="promotion-right"></div>
             <div class="short right column">
                 <div class="short row">
                     <div class="item i6">
@@ -119,13 +131,13 @@
                     </div>
                 </div>
             </div>
-            <div class="tall promotion"></div>
+            <div id="lower-promotion" class="tall promotion"></div>
         </div>
     </div>
     
     <div class="reg empty"></div>
 
-    <div class="reg container">
+    <div id="frozen-container" class="reg container">
         <h2 class="subtitle">Frozen Broth</h2>
         <div class="frozen">
             <div class="short column">
@@ -154,16 +166,16 @@
             <h2 class="subtitle">Best Sellers</h2>
             <div class="grid">
                 <div class="item i1">
-                    <button id="pf1">add to cart</button>
+                    <button id="pf1" class="b1">add to cart</button>
                 </div>
                 <div class="item i2">
-                    <button id="pf2">add to cart</button>
+                    <button id="pf2" class="b2">add to cart</button>
                 </div>
                 <div class="item i3">
-                    <button id="pf3">add to cart</button>
+                    <button id="pf3" class="b3">add to cart</button>
                 </div>
                 <div class="item i4">
-                    <button id="pf4">add to cart</button>
+                    <button id="pf4" class="b4">add to cart</button>
                 </div>
             </div>
         </div>
@@ -206,4 +218,5 @@
 <script src="buttons-store.js"></script>
 <script src="side-bar-button.js"></script>
 <script src="nav-buttons.js"></script>
+<script src="smooth-scroll.js"></script>
 </html>

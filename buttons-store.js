@@ -2,6 +2,7 @@ const cartDisplay = document.getElementById("cart-display")
 const priceDisplay = document.getElementById("total-price")
 let cart = []
 
+//get name from id
 let idNameDict = {
   "b1":"Classic Chicken Quart",
   "b2":"Classic Chicken Pint",
@@ -14,6 +15,7 @@ let idNameDict = {
   "b9":"Immune Boost"
 }
 
+//get price from id
 let idPriceDict = {
   "b1":17.0,
   "b2":10.0,
@@ -26,7 +28,7 @@ let idPriceDict = {
   "b9":19.0
 }
 
-
+//creates event listeners for the broth section buttons
 for (let i = 1; i <= 9; i++) {
     const button = document.getElementById(`b${i}`);
     if (button) {
@@ -35,21 +37,25 @@ for (let i = 1; i <= 9; i++) {
     }
 }
 
+//creates event listeners for the broth section buttons when
+// the media query is active
 for (let i = 1; i <= 9; i++){
   const button = document.getElementById(`p${i}`)
   if (button){
-    button.addEventListener('click', () => addToCart(`"b${i}"`));
+    button.addEventListener('click', () => addToCart(`b${i}`));
     console.log("b",i)
   }
 }
 
-for (let i = 1; i <= 6; i++){
+//creates event listeners for the frozen(name might change) section
+for (let i = 1; i <= 4; i++){
   const button = document.getElementById(`f${i}`)
   if (button){
-    button.addEventListener('click', () => addToCart(`"f${i}"`));
+    button.addEventListener('click', () => addToCart(`f${i}`));
   }
 }
 
+//creates event listeners for the best sellers section
 for (let i = 1; i <= 4; i++){
   const button = document.getElementById(`fav${i}`)
   if (button){
@@ -57,6 +63,7 @@ for (let i = 1; i <= 4; i++){
   }
 }
 
+//does the above but with the media query
 for (let i = 1; i <= 4; i++){
   const button = document.getElementById(`pf${i}`)
   if (button){
@@ -76,6 +83,12 @@ class Item {
 
   addAnother(){
     this.amount += 1
+    updateCart()
+  }
+
+  subtract(){
+    this.amount -= 1
+    updateCart()
   }
 
 }
@@ -93,22 +106,68 @@ function addToCart(id){
   return
 }
 
+function updateTotal(){
+  let sum = 0
+  for (let i = 0;i < cart.length; i++){
+    sum += cart[i].amount * cart[i].price
+  }
+  priceDisplay.textContent = "TOTAL: $"
+  priceDisplay.textContent += sum
+  return
+}
+
 function updateCart() {
   cartDisplay.textContent = "";
-  priceDisplay.textContent = "TOTAL: "
+  priceDisplay.textContent = "TOTAL: $"
   if (cart.length === 0) {
     cartDisplay.innerHTML = "No items in cart.";
     priceDisplay.textContent += "0"
     return;
   }
-  let sum = 0
+  let sum = 0.0
   for (let i = 0; i < cart.length; i++) {
     const item = cart[i];
-    let li = document.createElement("li")
-    console.log(li)
-    li.textContent = `${item.name} x ${item.amount} - $${item.amount * item.price}`
-    cartDisplay.appendChild(li);
-    sum += item.amount * item.price
+    if (item.amount > 0){
+      let li = document.createElement("li")
+      li.appendChild(makeDivString(cart[i]));
+      cartDisplay.appendChild(li);
+      sum += item.amount * item.price
+    }else{
+      //removes item from cart if amount <= 0
+      cart.splice(i,1)
+      updateCart()
+    }
   }
   priceDisplay.textContent += `${sum}`
+}
+
+function makeDivString(item) {
+  let newDiv = document.createElement("div")
+  let text = document.createElement("p")
+
+  let amountDiv = document.createElement("div")
+  let plus = document.createElement("button")
+  let minus = document.createElement("button")
+  let count = document.createElement("p")
+
+  count.textContent = item.amount
+
+  newDiv.classList.add("cart-item")
+  minus.classList.add("minus")
+  plus.classList.add("plus")
+  amountDiv.classList.add("amount-container")
+  newDiv.classList.add("cart-item")
+
+  minus.addEventListener("click", () => item.subtract())
+  plus.addEventListener('click', () => item.addAnother())
+  amountDiv.appendChild(minus)
+  amountDiv.appendChild(count)
+  amountDiv.appendChild(plus)
+
+  text.textContent = item.name + " - $" + (item.price * item.amount) + ".00" 
+
+  newDiv.appendChild(text)
+  newDiv.appendChild(amountDiv)
+  
+  return newDiv
 }

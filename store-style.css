@@ -132,6 +132,24 @@ header {
     right: 100vw;
     background-color: #fafaee;
     display: none;
+    align-items: center;
+    font-family: "Baskerville", serif;
+    font-style: bold;
+    border-right: #ff6a00 5px solid;
+    opacity: 0.85;
+}
+
+#total-price{
+    position: relative;
+    bottom: 0;
+}
+
+.sidebar:hover{
+    opacity: 1;
+}
+
+.sidebar ul{
+    list-style-type: none;
 }
 
 .sidebar form{
@@ -139,17 +157,51 @@ header {
     flex-direction: column;
     align-items: center;
     height: 100%;
+    margin-left: 10vh;
+    margin-right: 10vh;
 }
 
 .sidebar label{
-    padding: 2vh;
-    margin: 2vh;
+    padding: 1vh;
+    margin: 1vh;
+    font-size: 1vw;
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.amount-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    border: red 2px solid;
+}
+
+.amount-container button{
+    background-color: transparent;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    width: 3vh;
+    height: 3vh;
+    border: red 2px solid;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #1D3557;
 }
 
 .showing{
-    left: 0;
     z-index: 100;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 #sbbtndiv{
@@ -162,6 +214,7 @@ header {
 }
 
 #sidebarbtn{
+    background-color: transparent;
     width: 5vh;
     height: 5vh;
     border: none;
@@ -238,6 +291,10 @@ header {
     height: 45vh;
     border-radius: 4vh;
     border: purple 2px solid;
+    background-image: url(images/home/store/placeholder.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -285,7 +342,7 @@ header {
     border: none;
     display: block;
     background: #ff6a00;
-    opacity: 00;
+    opacity: 0;
     height: 40vh;
     width: 40vh;
     position: relative;
@@ -345,7 +402,8 @@ header {
 }
 
 .item > button:hover{
-    opacity: 0.7;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
 .favorites .item{
@@ -354,6 +412,10 @@ header {
 }
 
 .phone{
+    display: none;
+}
+
+#frozen-container{
     display: none;
 }
 
