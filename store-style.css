@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 html, body {
@@ -21,6 +22,7 @@ html, body {
     height: 20px;
     border-radius: 100%;
     background-color: #fafaee;
+    border: #ff6a00 2px solid;
     top: -20px;
     left: -20px;
     pointer-events: none;
