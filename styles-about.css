@@ -194,7 +194,7 @@ header {
 }
 
 .quick-hello {
-    height: 300vh;
+    height: 450vh;
 }
 
 .hello-title {
@@ -233,6 +233,10 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.hello-sub-2 {
+    white-space: nowrap;
+}
+
 .vermont-scribble {
     position: fixed;
     top: 60%;
@@ -263,9 +267,69 @@ header {
     transform: translate(-50%, -50%) scale(0.3);
 }
 
+.farmers-scribble {
+    position: fixed;
+    top: 45%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
 
+.farmers-scribble-2 {
+    position: fixed;
+    top: 68%;
+    left: 18%;
+    rotate: -70deg;
+    transform: translate(-50%, -50%);
+}
 
+.farmers-callout {
+    font-family: "Gluten-Medium", serif;
+    font-size: 2vw;
+    white-space: nowrap;
+    position: fixed;
+    top: 60% !important;
+    left: 15% !important;
+}
 
+.our-farmers {
+    height: 100vh;
+}
+
+.our-farmers div {
+    font-family: "Gluten-Medium", serif;
+    text-align: center;
+    font-size: 4vw;
+    color: #ff6a00;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-content {
+    height: 45vh;
+    background-color: #ff6a00;
+}
+
+.footer-spinning-text {
+    padding-top: 6vh;
+    padding-left: 6vh;
+}
+
+.footer-info {
+    position: fixed;
+    font-family: "Subjectivity-Medium", serif;
+    color: #fafaee;
+    font-size: 5vh;
+    right: 10vh;
+    bottom: 9.5vh;
+}
+
+.footer-logo {
+    position: fixed;
+    right: 90vh;
+    bottom: 7vh;
+}
 
 
 
