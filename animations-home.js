@@ -490,14 +490,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".footer-info",
-        {x: 1000},
+        {y: -500, opacity: 0},
         {
-            x: -200,
+            y: 0,
+            opacity: 1,
             duration: 2,
             scrollTrigger: {
                 trigger: ".footer-content",
                 start: "top 100%",
-                end: "top 60%",
+                end: "top 50%",
                 scrub: true,
             },
         }
