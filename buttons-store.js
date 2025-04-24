@@ -117,6 +117,10 @@ function updateTotal(){
 }
 
 function updateCart() {
+  let local = localStorage.getItem('cart')
+  if (local){
+    cart = JSON.parse(local)
+  }
   cartDisplay.textContent = "";
   priceDisplay.textContent = "TOTAL: $"
   if (cart.length === 0) {
@@ -138,6 +142,7 @@ function updateCart() {
       updateCart()
     }
   }
+  localStorage.setItem('cart',cart)
   priceDisplay.textContent += `${sum}`
 }
 
