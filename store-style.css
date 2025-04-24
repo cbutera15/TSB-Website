@@ -131,6 +131,25 @@ header {
     position: fixed;
     right: 100vw;
     background-color: #fafaee;
+    display: none;
+    align-items: center;
+    font-family: "Baskerville", serif;
+    font-style: bold;
+    border-right: #ff6a00 5px solid;
+    opacity: 0.85;
+}
+
+#total-price{
+    position: relative;
+    bottom: 0;
+}
+
+.sidebar:hover{
+    opacity: 1;
+}
+
+.sidebar ul{
+    list-style-type: none;
 }
 
 .sidebar form{
@@ -138,33 +157,86 @@ header {
     flex-direction: column;
     align-items: center;
     height: 100%;
+    margin-left: 10vh;
+    margin-right: 10vh;
 }
 
 .sidebar label{
-    padding: 2vh;
-    margin: 2vh;
+    padding: 1vh;
+    margin: 1vh;
+    font-size: 1vw;
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.amount-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.amount-container button{
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    width: 2vh;
+    height: 2vh;
+}
+
+.minus{
+    background-image: url(images/home/store/minus.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.plus{
+    background-image: url(images/home/store/plus.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #1D3557;
 }
 
 .showing{
-    left: 0;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
 }
 
 #sbbtndiv{
     z-index: 101;
     position: absolute;
-    top: 5vh;
-    left: 15vh;
+    top: 1vh;
+    left: 1vh;
     width: 5vh;
     height: 5vh;
-    border: red 2px solid;
 }
 
 #sidebarbtn{
+    background-color: transparent;
     width: 5vh;
     height: 5vh;
     border: none;
-    opacity: 0.1;
+}
+
+#btnimg{
+    width: 5vh;
+    height: 5vh;
 }
 
 .fixed {
@@ -199,7 +271,7 @@ header {
 }
 
 .promotion{
-    left: 20vh;
+    left: 17vh;
     width: 30vw;
     height: 45vh;
     border-radius: 4vh;
@@ -227,12 +299,16 @@ header {
 
 .promotion-right{
     position: absolute;
-    right: 20vh;
+    right: 17vh;
     top: 240.5vh;
     width: 30vw;
     height: 45vh;
     border-radius: 4vh;
     border: purple 2px solid;
+    background-image: url(images/home/store/placeholder.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -273,22 +349,75 @@ header {
     margin-left: 10vh;
     margin-right: 10vh;
     border-radius: 5vh;
-    border: blue 2px solid;
 }
 
-.item > button{
+.item button{
+    z-index: 2;
     border: none;
     display: block;
     background: #ff6a00;
-    opacity: 0.5;
-    height: 7.5vh;
+    opacity: 0;
+    height: 40vh;
     width: 40vh;
     position: relative;
-    top: 32vh;
+    top: 0;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #fafaee;
+    font-size: 2.5vw;
+}
+
+.i1{
+    background-image: url(images/home/store/classic-chicken.png);
+}
+
+.i2{
+    background-image: url(images/home/store/classic-chicken-p.jpg);
+    background-size: 120%;
+}
+
+.i3{
+    background-image: url(images/home/store/apple-pork.jpg);
+}
+
+.i4{
+    background-image: url(images/home/store/lemongrass-chicken.png);
+    background-size: 100%;
+}
+
+.i5{
+    background-image: url(images/home/store/tomato-beef.jpg);
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.i6{
+    background-image: url(images/home/store/lamb.jpg);
+    background-size: 100%;
+}
+
+.i7{
+    background-image: url(images/home/store/a-digestion.png);
+    background-size: 100%;
+}
+
+.i8{
+    background-image: url(images/home/store/a-special.png);
+    background-size: 100%;
+}
+
+.i9{
+    background-image: url(images/home/store/immune.jpg);
+    background-size: 100%;
+}
+
+.item{
+    background-position: center;
 }
 
 .item > button:hover{
-    opacity: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s forwards;
 }
 
 .favorites .item{
@@ -296,21 +425,46 @@ header {
     margin-right: 7.5vh;
 }
 
+.phone{
+    display: none;
+}
+
+#frozen-container{
+    display: none;
+}
+
 @media (max-aspect-ratio: 16/9) {
-    .promotion, .promotion-right {
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-      margin: 2vh auto;
-      width: 80vw;
-      height: 35vh;
-      display: block;
+    .reg{
+        display: none;
     }
-  
-    .right {
-      left: 0 !important;
+
+    .phone{
+        display: block;
+    }
+
+    .phone > .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        grid-gap: 2vh;
     }
   }
 
+@media (max-aspect-ratio: 9/16){
+    .item{
+        width: 15vh;
+        height: 15vh;
+    }
 
+    .grid{
+        grid-gap: 0vh;
+    }
+
+    .sidebar{
+        width: 100vw;
+    }
+}

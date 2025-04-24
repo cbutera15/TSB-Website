@@ -11,11 +11,14 @@ function toggleSideBar(){
     if(showing){
         showing = false
         sidebar.classList.remove("showing")
+        gsap.to(".sidebar", {x: "-=20vw", duration: 1})
+        gsap.to(div, {x: "-=15vw", duration: 1})
     }else{
         showing = true
         sidebar.classList.add("showing")
+        gsap.to(sidebar, {x: "+=20vw", duration: 1})
+        gsap.to(div, {x: "+=15vw", duration: 1})
     }
-    console.log(sidebar.classList)
 }
 
 function toggleFixed(){
