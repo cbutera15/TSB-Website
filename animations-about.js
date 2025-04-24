@@ -316,9 +316,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".hello-sub-3",
-        {y: 750},
+        {y: 750, opacity: 0},
         {
             y: 0,
+            opacity: 1,
             duration: 1,
             ease: "power2.inOut",
             scrollTrigger: {
