@@ -180,7 +180,6 @@ header {
     align-items: center;
     width: 100%;
     justify-content: center;
-    border: red 2px solid;
 }
 
 .amount-container button{
@@ -418,7 +417,7 @@ header {
 
 .item > button:hover{
     opacity: 0;
-    animation: fadeIn 2s forwards;
+    animation: fadeIn 0.7s forwards;
 }
 
 .favorites .item{
