@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="store-style.css">
+    <meta name="theme-color" content="#ff6a00">
+    <title>Shop The Simmering Bone</title>
+    <!-- GSAP Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- ScrollTrigger Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="store-js/animations-store.js"></script>
+</head>
+<body>
+<header>
+    <div class="title">
+        <p class="orange">M</p>
+        <p>ARKET</p>
+    </div>
+    <div class="buttons">
+        <button onclick="document.location='index.html'">HOME</button>
+        <button>INGREDIENTS</button>
+        <button>ABOUT US</button>
+    </div>
+    <div id="sidebar"class="sidebar">
+    <h2>Your Cart</h2>
+
+        <div id="cart-items">
+            <ul id="cart-display">
+                No items in cart.
+            </ul>
+            <p id="total-price">Total: $0</p>
+        <form action="">
+            </div>
+            <br>
+            <div class="line"></div>
+            <br>
+            <h3>Customer Info</h3>
+            <label>
+                Name:
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Address:
+                <input name="address" required></input>
+            </label>
+            <button id="cart-submit" type="submit">Checkout</button>
+        </form>
+    </div>
+    <div id="sbbtndiv" class="sbbtndiv">
+        <button id="sidebarbtn"><img id="btnimg" src="images/store/shooping-cart.png"/></button>
+    </div>
+</header>
+<main>
+    <div class="empty"></div>
+    <div class="reg container">
+        <h2 id="best-seller-subtitle" class="subtitle">Best Sellers</h2>
+        <div class="favorites">
+            <div class="row">
+                <div class="item i1">
+                    <button id="fav1" class="b1">add to cart</button>
+                </div>
+                <div class="item i2">
+                    <button id="fav2" class="b2">add to cart</button>
+                </div>
+                <div class="item i3">
+                    <button id="fav3" class="b3">add to cart</button>
+                </div>
+                <div class="item i4">
+                    <button id="fav4" class="b4">add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="trigger-e" class="empty"></div>
+    
+    <div class="reg container">
+        <h2 class="subtitle">Broth</h2>
+        <div class="broth">
+            <div class="row">
+                <div class="item i1">
+                    <button id="b1">add to cart</button>
+                </div>
+                <div class="item i2">
+                    <button id="b2">add to cart</button>
+                </div>
+                <div class="item i3">
+                    <button id="b3">add to cart</button>
+                </div>
+            </div>
+            <div class="short row">
+                <div class="item i4">
+                    <button id="b4">add to cart</button>
+                </div>
+                <div class="item i5">
+                    <button id="b5">add to cart</button>
+                </div>
+            </div>
+            <div id="first-promotion" class="promotion-right"></div>
+            <div class="short right column">
+                <div class="short row">
+                    <div class="item i6">
+                        <button id="b6">add to cart</button>
+                    </div>
+                    <div class="item i7">
+                        <button id="b7">add to cart</button>
+                    </div>
+                </div>
+                <div class="short row">
+                    <div class="item i8">
+                        <button id="b8">add to cart</button>
+                    </div>
+                    <div class="item i9">
+                        <button id="b9">add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div id="lower-promotion" class="tall promotion"></div>
+        </div>
+    </div>
+    
+    <div class="reg empty"></div>
+
+    <div id="frozen-container" class="reg container">
+        <h2 class="subtitle">Frozen Broth</h2>
+        <div class="frozen">
+            <div class="short column">
+                <div class="short row">
+                    <div class="item i10">
+                        <button id="f1">add to cart</button>
+                    </div>
+                    <div class="item i11">
+                        <button id="f2">add to cart</button>
+                    </div>
+                </div>
+                <div class="short row">
+                    <div class="item i12">
+                        <button id="f3">add to cart</button>
+                    </div>
+                    <div class="item i13">
+                        <button id="f4">add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="phone">
+        <div class="container">
+            <h2 class="subtitle">Best Sellers</h2>
+            <div class="grid">
+                <div class="item i1">
+                    <button id="pf1" class="b1">add to cart</button>
+                </div>
+                <div class="item i2">
+                    <button id="pf2" class="b2">add to cart</button>
+                </div>
+                <div class="item i3">
+                    <button id="pf3" class="b3">add to cart</button>
+                </div>
+                <div class="item i4">
+                    <button id="pf4" class="b4">add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="empty"></div>
+        <div class="container">
+            <h2 class="subtitle">Broth</h2>
+            <div class="grid">
+                <div class="item i1">
+                    <button id="p1">add to cart</button>
+                </div>
+                <div class="item i2">
+                    <button id="p2">add to cart</button>
+                </div>
+                <div class="item i3">
+                    <button id="p3">add to cart</button>
+                </div>
+                <div class="item i4">
+                    <button id="p4">add to cart</button>
+                </div>
+                <div class="item i5">
+                    <button id="p5">add to cart</button>
+                </div>
+                <div class="item i6">
+                    <button id="p6">add to cart</button>
+                </div>
+                <div class="item i7">
+                    <button id="p7">add to cart</button>
+                </div>
+                <div class="item i8">
+                    <button id="p8">add to cart</button>
+                </div>
+                <div class="item i9">
+                    <button id="p9">add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<script src="store-js/buttons-store.js"></script>
+<script src="store-js/side-bar-button.js"></script>
+<script src="global-js/nav-buttons.js"></script>
+
+<!--Lenis Stuff (DO NOT TOUCH)-->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+<script src="global-js/smooth-scroll.js"></script>
+
+<!--Cursor Stuff-->
+<div class="circle_cursor"></div>
+<script src="global-js/cursor-hover-effects.js"></script>
+<script src="global-js/cursor.js"></script>
+</html>

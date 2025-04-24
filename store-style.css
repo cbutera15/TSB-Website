@@ -1,0 +1,488 @@
+@font-face { font-family: Subjectivity-Regular; src: url('./fonts/Subjectivity-Regular.otf'); }
+@font-face { font-family: Subjectivity-Medium; src: url('./fonts/Subjectivity-Medium.otf'); }
+@font-face { font-family: Subjectivity-Bold; src: url('./fonts/Subjectivity-Bold.otf'); }
+@font-face { font-family: Gluten-Medium; src: url('./fonts/Gluten-Medium.otf'); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+html, body {
+    background-color: #fafaee;
+    color: #1D3557;
+    max-width: 100%;
+}
+
+.circle_cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #fafaee;
+    border: #ff6a00 4px double;
+    top: -20px;
+    left: -20px;
+    pointer-events: none;
+    z-index: 10008;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+body{
+    z-index: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/home/title-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    /*transition: all ease-in-out 0.2s;*/
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title {
+    justify-content: left;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #fafaee;
+    font-size: 9.2vw;
+    position: absolute;
+    top: 40.8vh;
+    opacity: 0;
+    filter: blur(50px);
+    animation: fadeIn 2s ease-out forwards;
+    margin: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #ff6a00;
+    font-size: 5vw;
+}
+
+.orange {
+    color: #ff6a00;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        margin: 0;
+    }
+}
+
+.buttons{
+    /*border: red 2px solid;*/
+    display: flex;
+    align-items: center;
+    height: 8vw;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    margin: 5vh;
+    filter: blur(50px);
+    animation: fadeIn 3s ease-out forwards;
+    z-index: 3;
+}
+
+.buttons button{
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+    margin: 6vh;
+    color: #fafaee;
+    font-size: 4.6vw;
+    transition: ease-in-out 0.2s;
+}
+
+.buttons button:hover{
+    transform: scale(1.05);
+    transition: transform ease-in-out 0.2s;
+    animation: glow 5s ease-in-out infinite alternate;
+}
+
+.buttons-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200vh;
+    height: 14%;
+    z-index: 1002;
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+}
+
+#nav-bar{
+    width: 100vw;
+    height: 15vh;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background-color: #fafaee;
+    opacity: 0.7;
+}
+
+.sidebar{
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    right: 100vw;
+    background-color: #fafaee;
+    display: none;
+    align-items: center;
+    font-family: "Baskerville", serif;
+    font-style: bold;
+    border-right: #ff6a00 5px solid;
+    opacity: 0.85;
+}
+
+#total-price{
+    position: relative;
+    bottom: 0;
+}
+
+.sidebar:hover{
+    opacity: 1;
+}
+
+.sidebar ul{
+    list-style-type: none;
+}
+
+.sidebar form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.sidebar label{
+    padding: 1vh;
+    margin: 1vh;
+    font-size: 1vw;
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.amount-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.amount-container button{
+    background-color: transparent;
+    border: none;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    width: 2vh;
+    height: 2vh;
+}
+
+.minus{
+    background-image: url(images/store/minus.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.plus{
+    background-image: url(images/store/plus.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #1D3557;
+}
+
+.showing{
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+#sbbtndiv{
+    z-index: 101;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    width: 5vh;
+    height: 5vh;
+}
+
+#sidebarbtn{
+    background-color: transparent;
+    width: 5vh;
+    height: 5vh;
+    border: none;
+}
+
+#btnimg{
+    width: 5vh;
+    height: 5vh;
+}
+
+.fixed {
+    position: fixed !important;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.empty {
+    height: 10vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites {
+    height: 50vh;
+}
+
+.favorites > .row > .item{
+    width: 30vw;
+}
+
+.promotion{
+    left: 17vh;
+    width: 30vw;
+    height: 45vh;
+    border-radius: 4vh;
+}
+
+.broth > .promotion{
+    position: absolute;
+    top: 285vh;
+    background-image: url(images/store/landscape-farm.jpg);
+    background-position: center;
+}
+
+.frozen > .promotion{
+    position: absolute;
+    top: 397.5vh;
+}
+
+.promotion.a{
+    left: 0;
+    background-color: #ff6a00;
+}
+
+.promotion.b{
+    left: 70vw;
+}
+
+.promotion-right{
+    position: absolute;
+    right: 17vh;
+    top: 240.5vh;
+    width: 30vw;
+    height: 45vh;
+    border-radius: 4vh;
+    background-image: url(images/store/placeholder.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.column{
+    width: 99vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row {
+    width: 99vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.short{
+    width: 71vw;
+}
+
+.tall{
+    height: 90vh
+}
+
+.right{
+    position: relative;
+    left: 28vw;
+}
+
+.item {
+    overflow: hidden;
+    height: 40vh;
+    width: 40vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    border-radius: 5vh;
+}
+
+.item button{
+    z-index: 2;
+    border: none;
+    display: block;
+    background: #ff6a00;
+    opacity: 0;
+    height: 40vh;
+    width: 40vh;
+    position: relative;
+    top: 0;
+    font-family: "Baskerville", serif;
+    font-style: italic;
+    color: #fafaee;
+    font-size: 2.5vw;
+}
+
+.i1{
+    background-image: url(images/store/classic-chicken.png);
+}
+
+.i2{
+    background-image: url(images/store/classic-chicken-p.jpg);
+    background-size: 120%;
+}
+
+.i3{
+    background-image: url(images/store/apple-pork.jpg);
+}
+
+.i4{
+    background-image: url(images/store/lemongrass-chicken.png);
+    background-size: 100%;
+}
+
+.i5{
+    background-image: url(images/store/tomato-beef.jpg);
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.i6{
+    background-image: url(images/store/lamb.jpg);
+    background-size: 100%;
+}
+
+.i7{
+    background-image: url(images/store/a-digestion.png);
+    background-size: 100%;
+}
+
+.i8{
+    background-image: url(images/store/a-special.png);
+    background-size: 100%;
+}
+
+.i9{
+    background-image: url(images/store/immune.jpg);
+    background-size: 100%;
+}
+
+.item{
+    background-position: center;
+}
+
+.item > button:hover{
+    opacity: 0;
+    animation: fadeIn 0.7s forwards;
+}
+
+.item button:active{
+    background-color: #ce5b08;
+}
+
+.favorites .item{
+    margin-left: 7.5vh;
+    margin-right: 7.5vh;
+}
+
+.phone{
+    display: none;
+}
+
+#frozen-container{
+    display: none;
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .reg{
+        display: none;
+    }
+
+    .phone{
+        display: block;
+    }
+
+    .phone > .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        grid-gap: 2vh;
+    }
+  }
+
+@media (max-aspect-ratio: 9/16){
+    .item{
+        width: 15vh;
+        height: 15vh;
+    }
+
+    .grid{
+        grid-gap: 0vh;
+    }
+
+    .sidebar{
+        width: 100vw;
+    }
+}
