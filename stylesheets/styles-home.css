@@ -1,7 +1,7 @@
-@font-face { font-family: Subjectivity-Regular; src: url('./fonts/Subjectivity-Regular.otf'); }
-@font-face { font-family: Subjectivity-Medium; src: url('./fonts/Subjectivity-Medium.otf'); }
-@font-face { font-family: Subjectivity-Bold; src: url('./fonts/Subjectivity-Bold.otf'); }
-@font-face { font-family: Gluten-Medium; src: url('./fonts/Gluten-Medium.otf'); }
+@font-face { font-family: Subjectivity-Regular; src: url('../fonts/Subjectivity-Regular.otf'); }
+@font-face { font-family: Subjectivity-Medium; src: url('../fonts/Subjectivity-Medium.otf'); }
+@font-face { font-family: Subjectivity-Bold; src: url('../fonts/Subjectivity-Bold.otf'); }
+@font-face { font-family: Gluten-Medium; src: url('../fonts/Gluten-Medium.otf'); }
 
 * {
     margin: 0;
@@ -32,7 +32,7 @@ html, body {
 header {
     display: flex;
     flex-direction: column;
-    background-image: url("./images/home/title-image.jpg");
+    background-image: url("../images/home/title-image.jpg");
     background-size: cover;
     background-position: center;
     padding: 50vh 0 50vh 20px;
