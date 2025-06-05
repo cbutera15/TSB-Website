@@ -351,6 +351,24 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.star-callout-link{
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    left: 5%;
+}
+
+.star-text {
+    font-family: "Gluten-Medium", serif;
+    color: #fafaee;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
 .footer-content {
     height: 45vh;
     background-color: #ff6a00;

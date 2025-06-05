@@ -395,12 +395,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     );
 
-    gsap.fromTo(
+gsap.fromTo(
         ".farmers-scribble",
         {y: 0},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 0},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 25},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -448,7 +448,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -480,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -496,7 +496,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -512,7 +512,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -528,7 +528,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -544,7 +544,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -560,7 +560,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -576,7 +576,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -592,7 +592,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 1000},
         {
             y: -1000,
-            duration: 1,
+            duration: 2,
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
@@ -602,6 +602,51 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     );
+
+    gsap.fromTo(
+        ".star",
+        {rotation: -360},
+        {
+            rotation: 0,
+            scrollTrigger: {
+                trigger: ".our-farmers",
+                start: "top: 150%",
+                end: "top: -100%",
+                scrub: true,
+            }
+        }
+    );
+
+    gsap.fromTo(
+        ".star-callout-link",
+        {x: -700},
+        {
+            x:0,
+            duration: 2,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: ".our-farmers",
+                start: "top 130%",
+                end: "top 80%",
+                scrub: true,
+            }
+        }
+    );
+
+    gsap.fromTo(
+        ".star-callout-link",
+        {x: -0},
+        {
+            x:-700,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: ".our-farmers",
+                start: "top 20%",
+                end: "top -30%",
+                scrub: true,
+            }
+        }
+    )
 
     gsap.to(
         "#spinning-text",
