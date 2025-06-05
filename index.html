@@ -77,53 +77,12 @@
             </div>
         </div>
 
-        <script>
-            window.addEventListener('scroll', function () {
-                const video = document.querySelector('section.vid video');
-                const videoRect = video.getBoundingClientRect();
-                const videoTop = videoRect.top + window.scrollY;
-                const videoBottom = videoTop + videoRect.height;
-                const screenHeight = window.innerHeight;
-
-                const maxWidth = 100; // Maximum width in percentage
-                const minWidth = 95.67; // Minimum width in percentage
-                const maxRadius = 34.14; // Maximum border-radius in px
-                const minRadius = 0; // Minimum border-radius in px
-
-                const scrollY = window.scrollY;
-
-                if (scrollY + screenHeight < videoTop) {
-                    // Before video
-                    video.style.width = `${minWidth}%`;
-                    video.style.borderRadius = `${maxRadius}px`;
-                } else if (scrollY + screenHeight >= videoTop && scrollY < videoTop) {
-                    // Scrolling into video
-                    const progress = Math.min((scrollY + screenHeight - videoTop) / screenHeight, 1);
-                    video.style.width = `${minWidth + progress * (maxWidth - minWidth)}%`;
-                    video.style.borderRadius = `${maxRadius - progress * (maxRadius - minRadius)}px`;
-                } else if (scrollY >= videoTop && scrollY < videoBottom - screenHeight) {
-                    // While scrolling through video
-                    video.style.width = `${maxWidth}%`;
-                    video.style.borderRadius = `${minRadius}px`;
-                } else if (scrollY >= videoBottom - screenHeight && scrollY < videoBottom) {
-                    // Scrolling out of video
-                    const progress = Math.min((scrollY - (videoBottom - screenHeight)) / screenHeight, 1);
-                    video.style.width = `${maxWidth - progress * (maxWidth - minWidth)}%`;
-                    video.style.borderRadius = `${minRadius + progress * (maxRadius - minRadius)}px`;
-                } else {
-                    // After video
-                    video.style.width = `${minWidth}%`;
-                    video.style.borderRadius = `${maxRadius}px`;
-                }
-            });
-
-        </script>
     </section>
     <section class="brand-statement">
         <div class="scribbles-above">
             <div class="scribble-videos">
                 <video src="videos/home/scribble-line-1.mov" muted playsinline id="scrib-vid-1" data-offset="120"></video>
-                <video src="videos/home/scribble-line-2.mov" muted playsinline id="scrib-vid-2" data-offset="-50"></video>
+                <video src="videos/home/scribble-trans.mov" muted playsinline id="scrib-vid-2" data-offset="-50"></video>
             </div>
         </div>
         <div class="brand-statement-container">
@@ -488,7 +447,7 @@
 
 <!--Cursor Stuff-->
 <div class="circle_cursor"></div>
-<script src="global-js/cursor-hover-effects.js"></script>
+<script src="global-js/cursor-hover-effects-home.js"></script>
 <script src="global-js/cursor.js"></script>
 
 <!--Lenis Stuff (DO NOT TOUCH)-->

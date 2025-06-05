@@ -18,13 +18,3 @@ window.addEventListener("scroll", () => {
         buttonsBackground.style.color = '#fafaee';
     }
 });
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY < 250) {
-        header.style.width = (100 - window.scrollY / 55) + "%";
-        header.style.borderRadius = (window.scrollY / 7) + "px";
-    } else {
-        header.style.width = (95.672727) + "%";
-        header.style.borderRadius = (34.142857) + "px";
-    }
-});

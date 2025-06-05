@@ -2,6 +2,63 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Header rounding corners
+    gsap.fromTo(
+        "header",
+        {
+            borderRadius: "0px",
+            width: "100%",
+        },
+        {
+            borderRadius: "35px",
+            width: "95%",
+            scrollTrigger: {
+                trigger: "header",
+                start: "bottom 100%",
+                end: "bottom 50%",
+                scrub: true,
+            }
+        }
+    )
+
+    // Video rounding corners
+    gsap.fromTo(
+        ".vid video",
+        {
+            borderRadius: "35px",
+            width: "95%",
+        },
+        {
+            borderRadius: "0px",
+            width: "100%",
+            scrollTrigger: {
+                trigger: ".vid video",
+                start: "top 50%",
+                end: "top 0%",
+                scrub: true,
+            }
+        }
+    )
+
+    gsap.fromTo(
+        ".vid video",
+        {
+            borderRadius: "0px",
+            width: "100%",
+        },
+        {
+            borderRadius: "35px",
+            width: "95%",
+            scrollTrigger: {
+                trigger: ".vid",
+                start: "bottom 100%",
+                end: "bottom 50%",
+                scrub: true,
+                markers: true,
+            }
+        }
+    )
+
     // Nav Color (ADD ALL BUTTON COLOR CHANGES HERE)
     gsap.fromTo(
         ".buttons button",
