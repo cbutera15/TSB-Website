@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     setTimeout(() => {
                         loadingScreen.style.display = "none"; // Hide after fade-out
                     }, 2000); // Wait for loading screen fade-out
-                }, );
+                }, 500);
             }, 300);
         }
     }
