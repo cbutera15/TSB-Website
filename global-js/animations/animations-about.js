@@ -2,6 +2,25 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function() {
+    // animate header border radius and width
+    gsap.fromTo(
+        "header",
+        {
+            borderRadius: "0px",
+            width: "100%",
+        },
+        {
+            borderRadius: "35px",
+            width: "95%",
+            scrollTrigger: {
+                trigger: "header",
+                start: "bottom 100%",
+                end: "bottom 50%",
+                scrub: true,
+            }
+        }
+    )
+
     // Animate hello title
     gsap.fromTo(
         ".char1",
@@ -617,36 +636,26 @@ gsap.fromTo(
         }
     );
 
-    gsap.fromTo(
-        ".star-callout-link",
-        {x: -700},
-        {
-            x:0,
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".our-farmers",
+            start: "top 130%",
+            end: "top -30%",
+            scrub: true,
+        }
+    });
+
+    timeline
+        .to(".star-callout-link", {
+            x: 700,
             duration: 2,
             ease: "power2.inOut",
-            scrollTrigger: {
-                trigger: ".our-farmers",
-                start: "top 130%",
-                end: "top 80%",
-                scrub: true,
-            }
-        }
-    );
-
-    gsap.fromTo(
-        ".star-callout-link",
-        {x: -0},
-        {
-            x:-700,
+        })
+        .to(".star-callout-link", {
+            x: 0,
+            duration: 2,
             ease: "power2.inOut",
-            scrollTrigger: {
-                trigger: ".our-farmers",
-                start: "top 20%",
-                end: "top -30%",
-                scrub: true,
-            }
-        }
-    )
+        });
 
     gsap.to(
         "#spinning-text",

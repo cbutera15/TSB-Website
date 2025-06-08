@@ -2,6 +2,7 @@
 @font-face { font-family: Subjectivity-Medium; src: url('../fonts/Subjectivity-Medium.otf'); }
 @font-face { font-family: Subjectivity-Bold; src: url('../fonts/Subjectivity-Bold.otf'); }
 @font-face { font-family: Gluten-Medium; src: url('../fonts/Gluten-Medium.otf'); }
+@font-face { font-family: HeadRBase; src: url('../fonts/introheadr-base-webfont.woff'); }
 
 * {
     margin: 0;
@@ -267,7 +268,7 @@ header {
 
 .hello-subheadings {
     font-size: 4vw;
-    font-family: 'Subjectivity-Regular', serif;
+    font-family: 'HeadRBase', serif;
     color: #ff6a00;
     justify-self: center;
     text-align: center;
@@ -358,7 +359,7 @@ header {
     justify-content: center;
     align-items: center;
     top: 30%;
-    left: 5%;
+    left: -630px;
 }
 
 .star-text {
