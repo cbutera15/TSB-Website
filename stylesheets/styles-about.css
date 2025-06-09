@@ -304,14 +304,13 @@ header {
     position: fixed;
     top: 30%;
     left: 50%;
-    rotate: 70deg;
     transform: translate(-50%, -50%);
 }
 
 .bone-logo {
     position: fixed;
-    top: 20%;
-    left: 45%;
+    top: 25%;
+    left: 40%;
     transform: translate(-50%, -50%) scale(0.3);
 }
 

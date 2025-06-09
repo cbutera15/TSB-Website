@@ -19,7 +19,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 scrub: true,
             }
         }
-    )
+    );
+
+    // Color changing for buttons
+    gsap.fromTo(
+        ".buttons button",
+        {color: '#fafaee'},
+        {
+            color: "#ff6a00",
+            scrollTrigger: {
+                trigger: "header",
+                start: "bottom 50%",
+                end: "bottom 0%",
+                scrub: true,
+            }
+        }
+    );
 
     // Animate hello title
     gsap.fromTo(
@@ -144,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function() {
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
-                start: "top -40%",
-                end: "top -80%",
+                start: "top -50%",
+                end: "top -90%",
                 scrub: true,
             }
         }
@@ -160,8 +175,8 @@ document.addEventListener("DOMContentLoaded", function() {
             ease: "power2.inOut",
             scrollTrigger: {
                 trigger: ".quick-hello",
-                start: "top -40%",
-                end: "top -80%",
+                start: "top -50%",
+                end: "top -90%",
                 scrub: true,
             }
         }
@@ -623,6 +638,38 @@ gsap.fromTo(
     );
 
     gsap.fromTo(
+        ".our-farmers",
+        {x: 0},
+        {
+            x: 200,
+            duration: 2,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: ".our-farmers",
+                start: "top 100%",
+                end: "top 50%",
+                scrub: true,
+            }
+        }
+    );
+
+    gsap.fromTo(
+        ".our-farmers",
+        {x: 200},
+        {
+            x: 0,
+            duration: 2,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: ".our-farmers",
+                start: "top 50%",
+                end: "top 0%",
+                scrub: true,
+            }
+        }
+    );
+
+    gsap.fromTo(
         ".star",
         {rotation: -360},
         {
@@ -647,7 +694,7 @@ gsap.fromTo(
 
     timeline
         .to(".star-callout-link", {
-            x: 700,
+            x: 800,
             duration: 2,
             ease: "power2.inOut",
         })
@@ -681,6 +728,24 @@ gsap.fromTo(
                 end: "top 50%",
                 scrub: true,
             },
+        }
+    );
+
+
+    // TODO - fix this section, why is there an ease????
+    gsap.fromTo(
+        ".buttons button",
+        {y: 0},
+        {
+            y: 200,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".our-farmers",
+                start: "bottom 120%",
+                end: "bottom 70%",
+                scrub: true,
+                markers: true,
+            }
         }
     );
 
