@@ -22,12 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
     )
 
     // Video rounding corners
-    gsap.fromTo(
+    gsap.to(
         ".vid video",
-        {
-            borderRadius: "35px",
-            width: "95%",
-        },
         {
             borderRadius: "0px",
             width: "100%",
@@ -40,15 +36,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     )
 
-    gsap.fromTo(
+    gsap.from(
         ".vid video",
         {
             borderRadius: "0px",
             width: "100%",
-        },
-        {
-            borderRadius: "35px",
-            width: "95%",
             scrollTrigger: {
                 trigger: ".vid",
                 start: "bottom 100%",
@@ -160,43 +152,44 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     );
 
-    gsap.fromTo(
-        ".quick-about",
-        {backgroundColor: '#fafaee'},
-        {
-            backgroundColor: '#ff6a00',
-            duration: 2,
-            scrollTrigger: {
-                trigger: ".health-benefits",
-                start: "top 100%",
-                end: "top 20%",
-                scrub: true,
-            },
-        }
-    );
+    // gsap.fromTo(
+    //     ".quick-about",
+    //     {backgroundColor: '#fafaee'},
+    //     {
+    //         backgroundColor: '#ff6a00',
+    //         duration: 2,
+    //         scrollTrigger: {
+    //             trigger: ".health-benefits",
+    //             start: "top 100%",
+    //             end: "top 20%",
+    //             scrub: true,
+    //         },
+    //     }
+    // );
 
     // Benefits
-    gsap.fromTo(
-        ".health-benefits",
-        {backgroundColor: '#fafaee'},
-        {
-            backgroundColor: '#ff6a00',
-            duration: 2,
-            scrollTrigger: {
-                trigger: ".health-benefits",
-                start: "top 100%",
-                end: "top 20%",
-                scrub: true,
-            },
-        }
-    );
+    // gsap.fromTo(
+    //     ".health-benefits",
+    //     {backgroundColor: '#fafaee'},
+    //     {
+    //         backgroundColor: '#ff6a00',
+    //         duration: 2,
+    //         scrollTrigger: {
+    //             trigger: ".health-benefits",
+    //             start: "top 100%",
+    //             end: "top 20%",
+    //             scrub: true,
+    //         },
+    //     }
+    // );
 
     gsap.fromTo(
         ".benefits-title",
-        {y: -1500, opacity: 0},
+        {y: -1500, borderRadius: "75px", width: "95%"},
         {
-            y: -50,
-            opacity: 1,
+            y: 0,
+            borderRadius: 0,
+            width: "100%",
             duration: 2,
             scrollTrigger: {
                 trigger: ".health-benefits",
@@ -353,9 +346,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-title",
-        {y: -50},
+        {y: 0, borderRadius: "0px", width: "100%"},
         {
-            y: -750,
+            y: -1200,
+            borderRadius: "50px",
+            width: "95%",
             duration: 2,
             scrollTrigger: {
                 trigger: ".our-broth",
