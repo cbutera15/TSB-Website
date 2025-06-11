@@ -186,7 +186,7 @@ header {
     margin: 6vh;
     color: #fafaee;
     font-size: 4.6vw;
-    transition: ease-in-out 0.2s;
+    /*transition: ease-in-out 0.2s;*/
 }
 
 .buttons button:hover{
@@ -383,11 +383,11 @@ header {
 
 .footer-info {
     position: fixed;
-    font-family: "Subjectivity-Medium", serif;
+    font-family: "HeadRBase", serif;
     color: #fafaee;
     font-size: 5vh;
-    right: 10vh;
-    bottom: 9.5vh;
+    left: 28vw;
+    bottom: 8vh;
 }
 
 .footer-logo {

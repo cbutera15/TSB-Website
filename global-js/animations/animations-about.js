@@ -731,8 +731,6 @@ gsap.fromTo(
         }
     );
 
-
-    // TODO - fix this section, why is there an ease????
     gsap.fromTo(
         ".buttons button",
         {y: 0},
@@ -741,10 +739,9 @@ gsap.fromTo(
             ease: "none",
             scrollTrigger: {
                 trigger: ".our-farmers",
-                start: "bottom 120%",
-                end: "bottom 70%",
+                start: "bottom 100%",
+                end: "bottom 50%",
                 scrub: true,
-                markers: true,
             }
         }
     );
