@@ -211,7 +211,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 start: "bottom 50%",
                 end: "bottom 150%",
                 scrub: true,
-                markers: true,
             }
         }
     )
