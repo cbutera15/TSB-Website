@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
             color: "#ff6a00",
             scrollTrigger: {
                 trigger: ".our-broth",
-                start: "top 10%",
-                end: "top -10%",
+                start: "top 50%",
+                end: "top 30%",
                 scrub: true,
             }
         }
@@ -184,12 +184,47 @@ document.addEventListener("DOMContentLoaded", function() {
     // );
 
     gsap.fromTo(
-        ".benefits-title",
-        {y: -1500, borderRadius: "75px", width: "95%"},
+        ".buttons button",
+        {y: 0},
+        {
+            y: 15,
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "top 100%",
+                end: "top 0%",
+                scrub: true,
+            }
+        }
+    )
+
+    gsap.fromTo(
+        ".buttons button",
+        {y: 15},
         {
             y: 0,
-            borderRadius: 0,
-            width: "100%",
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".health-benefits",
+                start: "bottom 50%",
+                end: "bottom 150%",
+                scrub: true,
+                markers: true,
+            }
+        }
+    )
+
+    gsap.fromTo(
+        ".benefits-title",
+        {y: 0, borderRadius: "75px", width: "90%", height: "100%", opacity: 0},
+        {
+            y: "100vh",
+            borderRadius: "20px",
+            width: "97%",
+            height: "95%",
+            opacity: 1,
             duration: 2,
             scrollTrigger: {
                 trigger: ".health-benefits",
@@ -346,11 +381,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-title",
-        {y: 0, borderRadius: "0px", width: "100%"},
+        {y: "100vh", borderRadius: "20px", width: "97%", height: "95%"},
         {
-            y: -1200,
+            y: 0,
             borderRadius: "50px",
-            width: "95%",
+            width: "90%",
             duration: 2,
             scrollTrigger: {
                 trigger: ".our-broth",

@@ -393,6 +393,7 @@ header {
 .footer-content {
   height: 45vh;
   background-color: #ff6a00;
+  border-radius: 50px 50px 0 0;
 }
 
 .footer-spinning-text {
