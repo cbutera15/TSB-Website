@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {y: 0, borderRadius: "75px", width: "90%", height: "100%", opacity: 0},
         {
             y: "100vh",
-            borderRadius: "20px",
+            borderRadius: "30px",
             width: "97%",
             height: "95%",
             opacity: 1,
@@ -380,7 +380,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.fromTo(
         ".benefits-title",
-        {y: "100vh", borderRadius: "20px", width: "97%", height: "95%"},
+        {y: "100vh", borderRadius: "30px", width: "97%", height: "95%"},
         {
             y: 0,
             borderRadius: "50px",
